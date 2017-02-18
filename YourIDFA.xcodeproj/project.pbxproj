@@ -14,6 +14,7 @@
 		5C066CF51E588FF400C2857D /* Idfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C066CF41E588FF400C2857D /* Idfa.swift */; };
 		5C066CF71E58933A00C2857D /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C066CF61E58933A00C2857D /* ItemType.swift */; };
 		5C066CFA1E589B2900C2857D /* UITableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C066CF91E589B2900C2857D /* UITableViewController+Extension.swift */; };
+		5C066CFD1E58A1F400C2857D /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C066CFC1E58A1F400C2857D /* ActionHandler.swift */; };
 		5CE59DA41E5862E40059324A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA31E5862E40059324A /* AppDelegate.swift */; };
 		5CE59DA61E5862E40059324A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA51E5862E40059324A /* ViewController.swift */; };
 		5CE59DA91E5862E40059324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DA71E5862E40059324A /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		5C066CF41E588FF400C2857D /* Idfa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idfa.swift; sourceTree = "<group>"; };
 		5C066CF61E58933A00C2857D /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		5C066CF91E589B2900C2857D /* UITableViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extension.swift"; sourceTree = "<group>"; };
+		5C066CFC1E58A1F400C2857D /* ActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		5CE59DA01E5862E40059324A /* YourIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE59DA31E5862E40059324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CE59DA51E5862E40059324A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		5C066CFB1E589DBB00C2857D /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				5C066CFC1E58A1F400C2857D /* ActionHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		5CE59D971E5862E40059324A = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		5CE59DA21E5862E40059324A /* YourIDFA */ = {
 			isa = PBXGroup;
 			children = (
+				5C066CFB1E589DBB00C2857D /* Handler */,
 				5C066CF81E589ACF00C2857D /* Extension */,
 				5C066CF11E588FC000C2857D /* Entity */,
 				5C066CEC1E58807F00C2857D /* Common */,
@@ -498,6 +509,7 @@
 				5C066CEE1E5880AF00C2857D /* AppIdentifier.swift in Sources */,
 				5C066CFA1E589B2900C2857D /* UITableViewController+Extension.swift in Sources */,
 				5C066CF01E58854C00C2857D /* Device.swift in Sources */,
+				5C066CFD1E58A1F400C2857D /* ActionHandler.swift in Sources */,
 				5C066CF51E588FF400C2857D /* Idfa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
