@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AppIdentifier {
+public final class AppIdentifier {
     
     // MARK: - Public
     
