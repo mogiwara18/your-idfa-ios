@@ -32,6 +32,7 @@
 		5C7A03B81E59A1A4001F2BCF /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03B71E59A1A4001F2BCF /* ActionType.swift */; };
 		5C7A03BC1E59B96B001F2BCF /* HomeViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BB1E59B96B001F2BCF /* HomeViewDataSource.swift */; };
 		5C7A03BE1E59BA34001F2BCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */; };
+		5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */; };
 		5CE59DA41E5862E40059324A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA31E5862E40059324A /* AppDelegate.swift */; };
 		5CE59DA61E5862E40059324A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA51E5862E40059324A /* ViewController.swift */; };
 		5CE59DA91E5862E40059324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DA71E5862E40059324A /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		5C7A03B71E59A1A4001F2BCF /* ActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
 		5C7A03BB1E59B96B001F2BCF /* HomeViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewDataSource.swift; sourceTree = "<group>"; };
 		5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5CE59DA01E5862E40059324A /* YourIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE59DA31E5862E40059324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CE59DA51E5862E40059324A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		5C7A039B1E5979CE001F2BCF /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C066CF71E58933A00C2857D /* ItemType.swift in Sources */,
+				5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */,
 				5C7A03A21E597B15001F2BCF /* Analytics.swift in Sources */,
 				5C7A03981E59782B001F2BCF /* Constants.swift in Sources */,
 				5C066CF31E588FE800C2857D /* Item.swift in Sources */,
