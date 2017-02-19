@@ -1,3 +1,14 @@
-PODFILE CHECKSUM: af1f1a44665669ee569709df11b2bce277beccca
+PODS:
+  - Material (2.3.19):
+    - Material/Core (= 2.3.19)
+  - Material/Core (2.3.19)
+
+DEPENDENCIES:
+  - Material (~> 2.0)
+
+SPEC CHECKSUMS:
+  Material: ad15e0b55e3a3c104195e8409afa199a430c2e6c
+
+PODFILE CHECKSUM: 07512b98bb66bb433e8c1dc01b1d2ef3d668b29c
 
 COCOAPODS: 1.2.0

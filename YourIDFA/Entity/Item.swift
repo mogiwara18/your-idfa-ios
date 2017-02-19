@@ -14,11 +14,13 @@ public final class Item {
     
     public let idfa: Idfa
     public let type: ItemType
+    public let action: ActionType
     
     // MARK: - Initialize
     
-    public init(idfa: Idfa, type: ItemType) {
+    public init(idfa: Idfa, type: ItemType, action: ActionType) {
         self.idfa = idfa
         self.type = type
+        self.action = action
     }
 }

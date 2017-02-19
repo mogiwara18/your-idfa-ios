@@ -6,6 +6,7 @@ target 'YourIDFA' do
   use_frameworks!
 
   # Pods for YourIDFA
+  pod 'Material', '~> 2.0'
 
   target 'YourIDFATests' do
     inherit! :search_paths
