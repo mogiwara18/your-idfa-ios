@@ -34,42 +34,6 @@ public enum ItemType {
     
     // MARK: - Public
     
-    public var height: CGFloat {
-        switch self {
-        case .Header:
-            return 140
-        case .Idfa:
-            return 110
-        case .Optout:
-            return 80
-        case .Action:
-            return 70
-        }
-    }
-    
-    public func registerNib(tableView: UITableView) {
-        let nib = UINib(nibName: self.nibName, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: self.cellIdentifier)
-    }
-    
-    public func dequeueReusableCell<T: UITableViewCell>(tableView: UITableView,
-                                    indexPath: IndexPath) -> T {
-        return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier,
-                                             for: indexPath) as! T
-    }
-    
-    public static func values() -> [ItemType] {
-        return [.Header,
-                .Idfa,
-                .Optout,
-                .Action(.Reload),
-                .Action(.Copy),
-                .Action(.Send),
-                .Action(.Share)]
-    }
-    
-    // MARK: - Private
-    
     private var cellIdentifier: String {
         switch self {
         case .Header:
@@ -94,5 +58,43 @@ public enum ItemType {
         case .Action:
             return ACTION_CELL_ID
         }
+    }
+    
+    public var height: CGFloat {
+        switch self {
+        case .Header:
+            return 140
+        case .Idfa:
+            return 110
+        case .Optout:
+            return 80
+        case .Action:
+            return 70
+        }
+    }
+    
+    public static func values() -> [ItemType] {
+        return [.Header,
+                .Idfa,
+                .Optout,
+                .Action(.Reload),
+                .Action(.Copy),
+                .Action(.Send),
+                .Action(.Share)]
+    }
+    
+    public static func registerNib(tableView: UITableView) {
+        let types: [ItemType] = [.Header, .Idfa, .Optout, .Action(.Other)]
+        
+        for type in types {
+            let nib = UINib(nibName: type.nibName, bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: type.cellIdentifier)
+        }
+    }
+    
+    public func dequeueReusableCell<T: UITableViewCell>(tableView: UITableView,
+                                    indexPath: IndexPath) -> T {
+        return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier,
+                                             for: indexPath) as! T
     }
 }
