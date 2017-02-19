@@ -8,11 +8,11 @@
 
 import UIKit
 
-public enum ItemType: Int {
+public enum ItemType {
     case Header
     case Idfa
     case Optout
-    case Action
+    case Action(ActionType)
     
     // MARK: - Property
     
@@ -56,6 +56,16 @@ public enum ItemType: Int {
                                     indexPath: IndexPath) -> T {
         return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier,
                                              for: indexPath) as! T
+    }
+    
+    public static func values() -> [ItemType] {
+        return [.Header,
+                .Idfa,
+                .Optout,
+                .Action(.Reload),
+                .Action(.Copy),
+                .Action(.Send),
+                .Action(.Share)]
     }
     
     // MARK: - Private

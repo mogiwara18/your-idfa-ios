@@ -11,16 +11,31 @@ import AdSupport
 
 public final class HomeModel {
     
+    // MARK: - Property
+    
+    private let service = IdfaService()
+    
     // MARK: - Public
     
-    public func request() -> Idfa? {
-        guard let manager = ASIdentifierManager.shared() else {
-            return nil
+    public func request() -> [Item] {
+        var items = [Item]()
+        
+        guard let idfa = self.service.request() else {
+            return items
         }
         
-        let identifier = manager.advertisingIdentifier.uuidString
-        let isOptout = manager.isAdvertisingTrackingEnabled ? false : true
+        for itemType in ItemType.values() {
+            switch itemType {
+            case .Header, .Idfa, .Optout:
+                let item = Item(idfa: idfa, type: itemType, action: .Other)
+                items.append(item)
+            case .Action(let actionType):
+                let item = Item(idfa: idfa, type: itemType, action: actionType)
+                items.append(item)
+                break
+            }
+        }
         
-        return Idfa(identifier: identifier, isOptout: isOptout)
+        return items
     }
 }
