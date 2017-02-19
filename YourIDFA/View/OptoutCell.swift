@@ -8,7 +8,13 @@
 
 import UIKit
 
-class OptoutCell: UITableViewCell {
+final class OptoutCell: UITableViewCell {
+    
+    // MARK: - Property
+    
+    @IBOutlet weak var optoutLabel: UILabel!
+    
+    // MARK: - LifeCycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +26,4 @@ class OptoutCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
