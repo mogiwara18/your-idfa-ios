@@ -8,6 +8,46 @@
 
 import UIKit
 
-class ActionHandler: NSObject {
-
+public final class ActionHandler: NSObject {
+    
+    // MARK: - Property
+    
+    private weak var viewController: UIViewController?
+    
+    // MARK: - Initialize
+    
+    public init(viewController: UIViewController) {
+        super.init()
+        self.viewController = viewController
+    }
+    
+    // MARK: - Public
+    
+    public func action(item: Item) {
+        
+    }
+    
+    // MARK: - Private
+    
+    private func reload(item: Item) {
+        // TODO
+    }
+    
+    private func copy(item: Item) {
+        let pb = UIPasteboard.general
+        pb.string = item.idfa.identifier
+        
+        // TODO: show Toast
+    }
+    
+    private func send(item: Item) {
+        // TODO
+    }
+    
+    private func share(item: Item) {
+        let shareItems = [item.idfa.identifier]
+        let activity = UIActivityViewController(activityItems: shareItems,
+                                                applicationActivities: nil)
+        self.viewController?.present(activity, animated: true, completion: nil)
+    }
 }
