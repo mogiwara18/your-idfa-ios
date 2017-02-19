@@ -1,4 +1,4 @@
-git_url "https://github.com/naoto0822/private-product-deploy/tree/master/youridfa/ios"
+git_url "https://github.com/naoto0822/certificates-ios"
 
 type "development" # The default type, can be: appstore, adhoc or development
 
