@@ -24,6 +24,8 @@
 		5C7A03A41E597B43001F2BCF /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03A31E597B43001F2BCF /* Tracker.swift */; };
 		5C7A03A71E599114001F2BCF /* IdfaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03A51E599114001F2BCF /* IdfaCell.swift */; };
 		5C7A03A81E599114001F2BCF /* IdfaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A03A61E599114001F2BCF /* IdfaCell.xib */; };
+		5C7A03AB1E5995C0001F2BCF /* OptoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03A91E5995C0001F2BCF /* OptoutCell.swift */; };
+		5C7A03AC1E5995C0001F2BCF /* OptoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A03AA1E5995C0001F2BCF /* OptoutCell.xib */; };
 		5CE59DA41E5862E40059324A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA31E5862E40059324A /* AppDelegate.swift */; };
 		5CE59DA61E5862E40059324A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA51E5862E40059324A /* ViewController.swift */; };
 		5CE59DA91E5862E40059324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DA71E5862E40059324A /* Main.storyboard */; };
@@ -73,6 +75,8 @@
 		5C7A03A31E597B43001F2BCF /* Tracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		5C7A03A51E599114001F2BCF /* IdfaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdfaCell.swift; sourceTree = "<group>"; };
 		5C7A03A61E599114001F2BCF /* IdfaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdfaCell.xib; sourceTree = "<group>"; };
+		5C7A03A91E5995C0001F2BCF /* OptoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptoutCell.swift; sourceTree = "<group>"; };
+		5C7A03AA1E5995C0001F2BCF /* OptoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptoutCell.xib; sourceTree = "<group>"; };
 		5CE59DA01E5862E40059324A /* YourIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE59DA31E5862E40059324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CE59DA51E5862E40059324A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				5C7A039E1E597A0B001F2BCF /* HeaderCell.xib */,
 				5C7A03A51E599114001F2BCF /* IdfaCell.swift */,
 				5C7A03A61E599114001F2BCF /* IdfaCell.xib */,
+				5C7A03A91E5995C0001F2BCF /* OptoutCell.swift */,
+				5C7A03AA1E5995C0001F2BCF /* OptoutCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7A03AC1E5995C0001F2BCF /* OptoutCell.xib in Resources */,
 				5C7A03A01E597A0B001F2BCF /* HeaderCell.xib in Resources */,
 				5CE59DAE1E5862E40059324A /* LaunchScreen.storyboard in Resources */,
 				5C7A03A81E599114001F2BCF /* IdfaCell.xib in Resources */,
@@ -578,6 +585,7 @@
 				5C066CF31E588FE800C2857D /* Item.swift in Sources */,
 				5CE59DA61E5862E40059324A /* ViewController.swift in Sources */,
 				5C7A039F1E597A0B001F2BCF /* HeaderCell.swift in Sources */,
+				5C7A03AB1E5995C0001F2BCF /* OptoutCell.swift in Sources */,
 				5C7A03A71E599114001F2BCF /* IdfaCell.swift in Sources */,
 				5C7A03A41E597B43001F2BCF /* Tracker.swift in Sources */,
 				5CE59DA41E5862E40059324A /* AppDelegate.swift in Sources */,
