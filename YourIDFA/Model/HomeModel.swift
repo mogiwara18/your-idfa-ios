@@ -18,7 +18,7 @@ public final class HomeModel {
     // MARK: - Public
     
     public func request() -> [Item] {
-        var items = [Item]()
+        var items: [Item] = []
         
         guard let idfa = self.service.request() else {
             return items
