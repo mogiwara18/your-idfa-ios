@@ -12,4 +12,21 @@ public enum SettingType {
     case IDFA
     case LICENSE
     case VERSION
+    
+    // MARK: - Property
+    
+    private static func SETTING_NIB_NAME() -> String {
+        return "SettingCell"
+    }
+    
+    private static func SETTING_CELL_ID() -> String {
+        return "SettingCell"
+    }
+    
+    // MARK: - Public
+    
+    public static func registerNib(tableView: UITableView) {
+        let nib = UINib(nibName: SETTING_NIB_NAME(), bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: SETTING_CELL_ID())
+    }
 }
