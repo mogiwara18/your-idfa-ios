@@ -34,6 +34,9 @@
 		5C7A03BE1E59BA34001F2BCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */; };
 		5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */; };
 		5C7A03C31E59D155001F2BCF /* IdfaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03C21E59D155001F2BCF /* IdfaService.swift */; };
+		5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */; };
+		5CDCF1891E5BDDBD003C2C4F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1881E5BDDBD003C2C4F /* Setting.swift */; };
+		5CDCF18B1E5BDDCA003C2C4F /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */; };
 		5CE59DA41E5862E40059324A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA31E5862E40059324A /* AppDelegate.swift */; };
 		5CE59DA61E5862E40059324A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA51E5862E40059324A /* ViewController.swift */; };
 		5CE59DA91E5862E40059324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DA71E5862E40059324A /* Main.storyboard */; };
@@ -93,6 +96,9 @@
 		5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5C7A03C21E59D155001F2BCF /* IdfaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdfaService.swift; sourceTree = "<group>"; };
+		5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		5CDCF1881E5BDDBD003C2C4F /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
 		5CE59DA01E5862E40059324A /* YourIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE59DA31E5862E40059324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CE59DA51E5862E40059324A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				5C066CF21E588FE800C2857D /* Item.swift */,
+				5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */,
+				5CDCF1881E5BDDBD003C2C4F /* Setting.swift */,
 				5C7A03B71E59A1A4001F2BCF /* ActionType.swift */,
 				5C066CF41E588FF400C2857D /* Idfa.swift */,
 				5C066CF61E58933A00C2857D /* ItemType.swift */,
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7A03931E5974B8001F2BCF /* HomeModel.swift */,
+				5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -612,11 +621,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDCF18B1E5BDDCA003C2C4F /* SettingType.swift in Sources */,
 				5C066CF71E58933A00C2857D /* ItemType.swift in Sources */,
 				5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */,
 				5C7A03A21E597B15001F2BCF /* Analytics.swift in Sources */,
 				5C7A03981E59782B001F2BCF /* Constants.swift in Sources */,
 				5C066CF31E588FE800C2857D /* Item.swift in Sources */,
+				5CDCF1891E5BDDBD003C2C4F /* Setting.swift in Sources */,
 				5CE59DA61E5862E40059324A /* ViewController.swift in Sources */,
 				5C7A03BE1E59BA34001F2BCF /* HomeViewController.swift in Sources */,
 				5C7A03C31E59D155001F2BCF /* IdfaService.swift in Sources */,
@@ -632,6 +643,7 @@
 				5C066CF01E58854C00C2857D /* Device.swift in Sources */,
 				5C066CFD1E58A1F400C2857D /* ActionHandler.swift in Sources */,
 				5C7A03B81E59A1A4001F2BCF /* ActionType.swift in Sources */,
+				5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */,
 				5C7A03B51E599CDB001F2BCF /* ActionCell.swift in Sources */,
 				5C7A03941E5974B8001F2BCF /* HomeModel.swift in Sources */,
 				5C066CF51E588FF400C2857D /* Idfa.swift in Sources */,
