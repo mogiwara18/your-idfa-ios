@@ -92,7 +92,8 @@ public enum ItemType {
         }
     }
     
-    public func dequeueReusableCell<T: UITableViewCell>(tableView: UITableView,
+    public func dequeueReusableCell<T: UITableViewCell>(castType: T,
+                                    tableView: UITableView,
                                     indexPath: IndexPath) -> T {
         return tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier,
                                              for: indexPath) as! T
