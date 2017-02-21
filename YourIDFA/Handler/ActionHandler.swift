@@ -12,14 +12,7 @@ public final class ActionHandler: NSObject {
     
     // MARK: - Property
     
-    private weak var viewController: UIViewController?
-    
-    // MARK: - Initialize
-    
-    public init(viewController: UIViewController) {
-        super.init()
-        self.viewController = viewController
-    }
+    public weak var viewController: UIViewController?
     
     // MARK: - Public
     
