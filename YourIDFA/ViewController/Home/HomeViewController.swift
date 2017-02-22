@@ -38,6 +38,7 @@ final class HomeViewController: UITableViewController, ActionDelegate {
     }
     
     private func configureTableView() {
+        ItemType.registerNib(tableView: self.tableView)
         self.setEmptyFooter()
     }
     
