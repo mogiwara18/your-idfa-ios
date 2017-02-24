@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C7k-Fy-kjc" id="nrQ-1p-7E2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -32,7 +32,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your IDFA" id="dow-mS-WmX">
-                        <barButtonItem key="rightBarButtonItem" image="ic_more_horiz_white" id="i3q-zr-M1Y">
+                        <barButtonItem key="rightBarButtonItem" image="menu_button" style="plain" id="i3q-zr-M1Y">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -45,7 +45,7 @@
         <scene sceneID="QNo-s0-Ltp">
             <objects>
                 <navigationController id="viH-rb-1eL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VFC-TM-VBB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VFC-TM-VBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +64,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_more_horiz_white" width="24" height="24"/>
+        <image name="menu_button" width="24" height="24"/>
     </resources>
 </document>
