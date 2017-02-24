@@ -38,7 +38,6 @@
 		5CDCF1891E5BDDBD003C2C4F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1881E5BDDBD003C2C4F /* Setting.swift */; };
 		5CDCF18B1E5BDDCA003C2C4F /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */; };
 		5CE59DA41E5862E40059324A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA31E5862E40059324A /* AppDelegate.swift */; };
-		5CE59DA61E5862E40059324A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DA51E5862E40059324A /* ViewController.swift */; };
 		5CE59DA91E5862E40059324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DA71E5862E40059324A /* Main.storyboard */; };
 		5CE59DAB1E5862E40059324A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DAA1E5862E40059324A /* Assets.xcassets */; };
 		5CE59DAE1E5862E40059324A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE59DAC1E5862E40059324A /* LaunchScreen.storyboard */; };
@@ -101,7 +100,6 @@
 		5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
 		5CE59DA01E5862E40059324A /* YourIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE59DA31E5862E40059324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CE59DA51E5862E40059324A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CE59DA81E5862E40059324A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CE59DAA1E5862E40059324A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CE59DAD1E5862E40059324A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 				5C066CEC1E58807F00C2857D /* Common */,
 				5CE59DA31E5862E40059324A /* AppDelegate.swift */,
 				5C7A03971E59782B001F2BCF /* Constants.swift */,
-				5CE59DA51E5862E40059324A /* ViewController.swift */,
 				5CE59DA71E5862E40059324A /* Main.storyboard */,
 				5CE59DAA1E5862E40059324A /* Assets.xcassets */,
 				5CE59DAC1E5862E40059324A /* LaunchScreen.storyboard */,
@@ -628,7 +625,6 @@
 				5C7A03981E59782B001F2BCF /* Constants.swift in Sources */,
 				5C066CF31E588FE800C2857D /* Item.swift in Sources */,
 				5CDCF1891E5BDDBD003C2C4F /* Setting.swift in Sources */,
-				5CE59DA61E5862E40059324A /* ViewController.swift in Sources */,
 				5C7A03BE1E59BA34001F2BCF /* HomeViewController.swift in Sources */,
 				5C7A03C31E59D155001F2BCF /* IdfaService.swift in Sources */,
 				5C7A039F1E597A0B001F2BCF /* HeaderCell.swift in Sources */,
