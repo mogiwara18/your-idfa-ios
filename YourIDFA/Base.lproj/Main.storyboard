@@ -34,12 +34,143 @@
                     <navigationItem key="navigationItem" title="Your IDFA" id="dow-mS-WmX">
                         <barButtonItem key="rightBarButtonItem" image="menu_button" style="plain" id="i3q-zr-M1Y">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pressMenuButton:" destination="5dR-fx-YMK" id="6tk-P2-pdU"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OB-d9-Gue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="532"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="rjU-c9-Aux">
+            <objects>
+                <tableViewController id="e5i-R9-HuG" customClass="SettingViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6fK-PD-gTa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DFA-m7-GOU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DFA-m7-GOU" id="d9r-zo-xhL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e5i-R9-HuG" id="eKX-UN-d7j"/>
+                            <outlet property="delegate" destination="e5i-R9-HuG" id="CI5-C9-LzO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Setting" id="rJ0-uS-Asp">
+                        <barButtonItem key="rightBarButtonItem" image="close_button" style="plain" id="j4P-Xz-YAS">
+                            <connections>
+                                <action selector="pressCloseButton:" destination="e5i-R9-HuG" id="2Fi-ye-1f5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="qmj-cU-bsU" kind="show" id="24R-Lz-5gQ"/>
+                        <segue destination="f3n-GK-8A6" kind="show" id="Uua-uy-f1y"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uux-eP-jrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="1205"/>
+        </scene>
+        <!--What's IDFA-->
+        <scene sceneID="K8N-tB-4c3">
+            <objects>
+                <viewController id="qmj-cU-bsU" customClass="AboutIdfaViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="col-hy-gZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="VLs-fC-cMA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMK-g6-aUc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-ja-6g9">
+                                <rect key="frame" x="5" y="10" width="365" height="656"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The Advertising Identifier (IDFA) is a unique ID for each iOS device and is the only way to offer targeted ads.
+Users can choose to limit ad targeting on their iOS device.</string>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4iL-ja-6g9" firstAttribute="top" secondItem="DMK-g6-aUc" secondAttribute="top" constant="10" id="38r-ZK-v4O"/>
+                            <constraint firstAttribute="trailing" secondItem="4iL-ja-6g9" secondAttribute="trailing" constant="5" id="akU-q0-FYt"/>
+                            <constraint firstItem="VLs-fC-cMA" firstAttribute="top" secondItem="4iL-ja-6g9" secondAttribute="bottom" constant="1" id="dZh-bK-0O6"/>
+                            <constraint firstItem="4iL-ja-6g9" firstAttribute="leading" secondItem="DMK-g6-aUc" secondAttribute="leading" constant="5" id="yLa-Sc-EOX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="What's IDFA" id="EFA-n0-jsP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgD-Ng-Pc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="1204.9475262368817"/>
+        </scene>
+        <!--LICENSE-->
+        <scene sceneID="MMv-kG-YM6">
+            <objects>
+                <viewController id="f3n-GK-8A6" customClass="LicenseViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CcV-PL-pWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="edP-Sx-b7Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gsx-Io-dTn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-ck-E4p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="edP-Sx-b7Q" firstAttribute="top" secondItem="fNY-ck-E4p" secondAttribute="bottom" id="0iA-K4-Zgj"/>
+                            <constraint firstItem="fNY-ck-E4p" firstAttribute="top" secondItem="Gsx-Io-dTn" secondAttribute="top" id="NYu-wl-5To"/>
+                            <constraint firstAttribute="trailing" secondItem="fNY-ck-E4p" secondAttribute="trailing" id="grz-rg-iSE"/>
+                            <constraint firstItem="fNY-ck-E4p" firstAttribute="leading" secondItem="Gsx-Io-dTn" secondAttribute="leading" id="jmK-Gi-9iT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LICENSE" id="eIY-ds-xTE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1h-Vb-ATD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="1867.9160419790107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vH6-K6-vne">
+            <objects>
+                <navigationController storyboardIdentifier="NavSettingViewController" id="coJ-Fr-huR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zoO-0x-vY9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.38431372549999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e5i-R9-HuG" kind="relationship" relationship="rootViewController" id="XBk-3t-A11"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meE-Dw-mVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="1205"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QNo-s0-Ltp">
@@ -64,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close_button" width="24" height="24"/>
         <image name="menu_button" width="24" height="24"/>
     </resources>
 </document>

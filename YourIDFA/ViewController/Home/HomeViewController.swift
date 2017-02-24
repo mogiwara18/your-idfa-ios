@@ -46,6 +46,11 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         self.items = self.model.request()
         self.reloadData()
     }
+    
+    
+    @IBAction func pressMenuButton(_ sender: Any) {
+    }
+    
 
     // MARK: - UITableViewDatasource
 

@@ -19,6 +19,10 @@ final class SettingViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func pressCloseButton(_ sender: Any) {
+    }
+    
 
     // MARK: - Table view data source
 
