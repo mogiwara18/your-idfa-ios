@@ -176,7 +176,7 @@ Users can choose to limit ad targeting on their iOS device.</string>
         <scene sceneID="QNo-s0-Ltp">
             <objects>
                 <navigationController id="viH-rb-1eL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VFC-TM-VBB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VFC-TM-VBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
