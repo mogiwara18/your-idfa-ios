@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxX-ul-8S8" customClass="FlatButton" customModule="Material">
@@ -42,7 +42,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="pressActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="r8J-Ys-f1Y"/>
+                            <action selector="pressActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8ug-H1-r6R"/>
                         </connections>
                     </button>
                 </subviews>
@@ -54,7 +54,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="actionButton" destination="qxX-ul-8S8" id="9Kx-8G-U1n"/>
+                <outlet property="actionButton" destination="qxX-ul-8S8" id="D2H-4B-ZaE"/>
             </connections>
         </tableViewCell>
     </objects>
