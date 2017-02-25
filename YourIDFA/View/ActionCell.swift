@@ -18,10 +18,16 @@ final class ActionCell: UITableViewCell {
     
     var item: Item? {
         didSet {
-            if let action = self.item?.action {
-                self.actionButton.setTitle(action.text, for: .normal)
-                self.actionButton.backgroundColor = action.buttonColor
-                self.actionButton.tintColor = action.buttonColor
+            self.convertible = self.item?.action
+        }
+    }
+    
+    private var convertible: ActionCellConvertible? {
+        didSet {
+            if let convertible = self.convertible {
+                self.actionButton.setTitle(convertible.title, for: .normal)
+                self.actionButton.backgroundColor = convertible.buttonColor
+                self.actionButton.tintColor = convertible.buttonColor
             }
         }
     }

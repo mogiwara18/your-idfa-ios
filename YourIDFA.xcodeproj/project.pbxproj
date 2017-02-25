@@ -20,6 +20,7 @@
 		5C1F0CA11E61561D00235923 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0C9F1E61561D00235923 /* SettingCell.swift */; };
 		5C1F0CA21E61561D00235923 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA01E61561D00235923 /* SettingCell.xib */; };
 		5C1F0CA41E615F9600235923 /* SettingCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */; };
+		5C1F0CA61E616D3A00235923 /* ActionCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */; };
 		5C7A03941E5974B8001F2BCF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03931E5974B8001F2BCF /* HomeModel.swift */; };
 		5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7A03951E5974C5001F2BCF /* AdSupport.framework */; };
 		5C7A03981E59782B001F2BCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03971E59782B001F2BCF /* Constants.swift */; };
@@ -88,6 +89,7 @@
 		5C1F0C9F1E61561D00235923 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		5C1F0CA01E61561D00235923 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCellConvertible.swift; sourceTree = "<group>"; };
+		5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCellConvertible.swift; sourceTree = "<group>"; };
 		5C7A03931E5974B8001F2BCF /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5C7A03951E5974C5001F2BCF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		5C7A03971E59782B001F2BCF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5C066CF21E588FE800C2857D /* Item.swift */,
+				5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */,
 				5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */,
 				5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */,
 				5CDCF1881E5BDDBD003C2C4F /* Setting.swift */,
@@ -676,6 +679,7 @@
 				5CB793141E608DFD0044CCCE /* LicenseViewController.swift in Sources */,
 				5C7A03B81E59A1A4001F2BCF /* ActionType.swift in Sources */,
 				5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */,
+				5C1F0CA61E616D3A00235923 /* ActionCellConvertible.swift in Sources */,
 				5C7A03B51E599CDB001F2BCF /* ActionCell.swift in Sources */,
 				5C7A03941E5974B8001F2BCF /* HomeModel.swift in Sources */,
 				5C066CF51E588FF400C2857D /* Idfa.swift in Sources */,

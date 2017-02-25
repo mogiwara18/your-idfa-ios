@@ -8,16 +8,16 @@
 
 import UIKit
 
-public enum ActionType: Int {
+public enum ActionType: ActionCellConvertible {
     case Reload
     case Copy
     case Send
     case Share
     case Other
     
-    // MARK: - Public
+    // MARK: - ActionCellConvertible
     
-    public var text: String {
+    public var title: String {
         switch self {
         case .Reload:
             return "Reload"
