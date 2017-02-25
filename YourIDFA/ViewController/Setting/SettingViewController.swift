@@ -10,9 +10,19 @@ import UIKit
 
 final class SettingViewController: UITableViewController {
 
+    // MARK: - Property
+    
+    private var settings: [Setting] = []
+    private let model = SettingModel()
+    
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.configureTableView()
+        self.request()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,21 +30,47 @@ final class SettingViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pressCloseButton(_ sender: Any) {
+    // MARK: - Private
+    
+    private func configureTableView() {
+        SettingType.registerNib(tableView: self.tableView)
+        self.setEmptyFooter()
     }
     
-
-    // MARK: - Table view data source
+    private func request() {
+        self.settings = self.model.request()
+        self.reloadData()
+    }
+    
+    @IBAction func pressCloseButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.settings.count
     }
     
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SettingCell
+        cell.setting = self.settings[indexPath.row]
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+    }
 }
