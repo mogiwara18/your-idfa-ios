@@ -71,6 +71,16 @@ final class SettingViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        
+        let setting = self.settings[indexPath.row]
+        switch setting.type {
+        case .IDFA:
+            let vc = UIStoryboard.aboutIdfaViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .LICENSE:
+            let vc = UIStoryboard.licenseViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .VERSION:
+            ()
+        }
     }
 }
