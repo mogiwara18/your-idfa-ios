@@ -47,10 +47,10 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         self.reloadData()
     }
     
-    
     @IBAction func pressMenuButton(_ sender: Any) {
+        let settingVC = UIStoryboard.settingViewController()
+        self.present(settingVC, animated: true, completion: nil)
     }
-    
 
     // MARK: - UITableViewDatasource
 
