@@ -12,10 +12,21 @@ extension UIStoryboard {
     
     // MARK: - Public
     
-    class func settingViewController() -> UINavigationController {
+    static func settingViewController() -> UINavigationController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(
             withIdentifier: "NavSettingViewController") as! UINavigationController
     }
     
+    static func aboutIdfaViewController() -> AboutIdfaViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(
+            withIdentifier: "AboutIdfaViewController") as! AboutIdfaViewController
+    }
+    
+    static func licenseViewController() -> LicenseViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(
+            withIdentifier: "LicenseViewController") as! LicenseViewController
+    }
 }
