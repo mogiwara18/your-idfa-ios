@@ -8,12 +8,18 @@
 
 import UIKit
 
-class LicenseViewController: UIViewController {
+final class LicenseViewController: UIViewController {
 
+    // MARK: - Property
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.loadLicense()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +27,18 @@ class LicenseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private
+    
+    private func loadLicense() {
+        guard let path = Bundle.main.path(forResource: "LICENSE", ofType: "txt") else {
+            return
+        }
+        
+        do {
+            let text = try String(contentsOfFile: path, encoding: .utf8)
+            self.textView.text = text
+        } catch {
+            // noop
+        }
     }
-    */
-
 }

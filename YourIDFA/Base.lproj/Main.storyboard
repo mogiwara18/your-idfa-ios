@@ -86,7 +86,7 @@
         <!--What's IDFA-->
         <scene sceneID="K8N-tB-4c3">
             <objects>
-                <viewController id="qmj-cU-bsU" customClass="AboutIdfaViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutIdfaViewController" id="qmj-cU-bsU" customClass="AboutIdfaViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="col-hy-gZC"/>
                         <viewControllerLayoutGuide type="bottom" id="VLs-fC-cMA"/>
@@ -121,7 +121,7 @@ Users can choose to limit ad targeting on their iOS device.</string>
         <!--LICENSE-->
         <scene sceneID="MMv-kG-YM6">
             <objects>
-                <viewController id="f3n-GK-8A6" customClass="LicenseViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LicenseViewController" id="f3n-GK-8A6" customClass="LicenseViewController" customModule="YourIDFA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CcV-PL-pWD"/>
                         <viewControllerLayoutGuide type="bottom" id="edP-Sx-b7Q"/>
@@ -146,6 +146,9 @@ Users can choose to limit ad targeting on their iOS device.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LICENSE" id="eIY-ds-xTE"/>
+                    <connections>
+                        <outlet property="textView" destination="fNY-ck-E4p" id="tHQ-6q-laS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1h-Vb-ATD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +179,7 @@ Users can choose to limit ad targeting on their iOS device.</string>
         <scene sceneID="QNo-s0-Ltp">
             <objects>
                 <navigationController id="viH-rb-1eL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VFC-TM-VBB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VFC-TM-VBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
