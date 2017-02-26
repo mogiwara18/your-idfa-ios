@@ -22,6 +22,7 @@
 		5C1F0CA41E615F9600235923 /* SettingCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */; };
 		5C1F0CA61E616D3A00235923 /* ActionCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */; };
 		5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1F0CA71E61991D00235923 /* MessageUI.framework */; };
+		5C4124A51E62F01A00A6409B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C4124A41E62F01A00A6409B /* GoogleService-Info.plist */; };
 		5C7A03941E5974B8001F2BCF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03931E5974B8001F2BCF /* HomeModel.swift */; };
 		5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7A03951E5974C5001F2BCF /* AdSupport.framework */; };
 		5C7A03981E59782B001F2BCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03971E59782B001F2BCF /* Constants.swift */; };
@@ -92,6 +93,7 @@
 		5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCellConvertible.swift; sourceTree = "<group>"; };
 		5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCellConvertible.swift; sourceTree = "<group>"; };
 		5C1F0CA71E61991D00235923 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5C4124A41E62F01A00A6409B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "deploy/youridfa/ios/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5C7A03931E5974B8001F2BCF /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5C7A03951E5974C5001F2BCF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		5C7A03971E59782B001F2BCF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				5CE59DA71E5862E40059324A /* Main.storyboard */,
 				5CE59DAA1E5862E40059324A /* Assets.xcassets */,
 				5CE59DAC1E5862E40059324A /* LaunchScreen.storyboard */,
+				5C4124A41E62F01A00A6409B /* GoogleService-Info.plist */,
 				5CE59DAF1E5862E40059324A /* Info.plist */,
 			);
 			path = YourIDFA;
@@ -492,6 +495,7 @@
 				5C1F0CA21E61561D00235923 /* SettingCell.xib in Resources */,
 				5C1F0C9E1E614DB000235923 /* LICENSE.txt in Resources */,
 				5CE59DAB1E5862E40059324A /* Assets.xcassets in Resources */,
+				5C4124A51E62F01A00A6409B /* GoogleService-Info.plist in Resources */,
 				5C7A03B61E599CDB001F2BCF /* ActionCell.xib in Resources */,
 				5CE59DA91E5862E40059324A /* Main.storyboard in Resources */,
 			);

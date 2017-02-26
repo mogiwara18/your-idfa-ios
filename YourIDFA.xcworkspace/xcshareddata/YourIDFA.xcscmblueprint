@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FA44B82B2E84DBEB41609B8B2E6D563BC39F919C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "351B861DE80C72E1C93D8416C83539364A966F62" : 9223372036854775807,
+    "FA44B82B2E84DBEB41609B8B2E6D563BC39F919C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C993747-01D8-4F3B-9996-CA55FAF8CC37",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "351B861DE80C72E1C93D8416C83539364A966F62" : "YourIDFA\/deploy\/",
+    "FA44B82B2E84DBEB41609B8B2E6D563BC39F919C" : "YourIDFA\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YourIDFA",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YourIDFA.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/naoto0822\/private-product-deploy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "351B861DE80C72E1C93D8416C83539364A966F62"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/naoto0822\/your-idfa-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FA44B82B2E84DBEB41609B8B2E6D563BC39F919C"
+    }
+  ]
+}
