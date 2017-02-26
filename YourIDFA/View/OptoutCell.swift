@@ -14,6 +14,14 @@ final class OptoutCell: UITableViewCell {
     
     @IBOutlet weak var optoutLabel: UILabel!
     
+    var item: Item? {
+        didSet {
+            if let item = self.item {
+                self.optoutLabel.text = item.idfa.isOptout ? "Yes" : "No"
+            }
+        }
+    }
+    
     // MARK: - LifeCycle
 
     override func awakeFromNib() {

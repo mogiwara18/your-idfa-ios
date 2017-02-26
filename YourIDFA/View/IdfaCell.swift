@@ -14,6 +14,14 @@ final class IdfaCell: UITableViewCell {
     
     @IBOutlet weak var idfaLabel: UILabel!
     
+    var item: Item? {
+        didSet {
+            if let item = self.item {
+                self.idfaLabel.text = item.idfa.identifier
+            }
+        }
+    }
+    
     // MARK: - LifeCycle
 
     override func awakeFromNib() {

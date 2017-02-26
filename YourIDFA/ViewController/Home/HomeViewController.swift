@@ -80,10 +80,12 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         case .Idfa:
             let cell = item.type.dequeueReusableCell(castType: IdfaCell(),
                                                      tableView: tableView, indexPath: indexPath)
+            cell.item = item
             return cell
         case .Optout:
             let cell = item.type.dequeueReusableCell(castType: OptoutCell(),
                                                      tableView: tableView, indexPath: indexPath)
+            cell.item = item
             return cell
         case .Action:
             let cell = item.type.dequeueReusableCell(castType: ActionCell(),
