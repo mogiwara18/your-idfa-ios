@@ -54,7 +54,7 @@ public final class ActionHandler: NSObject, MFMailComposeViewControllerDelegate 
         
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = self
-        vc.setSubject(Constants.Share.MAIL_SUBJECT)
+        vc.setSubject(Constants.Mail.MAIL_SUBJECT)
         vc.setMessageBody(self.mailBody(item: item), isHTML: false)
         self.viewController?.present(vc, animated: true, completion: nil)
     }

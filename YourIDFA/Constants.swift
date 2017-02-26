@@ -9,7 +9,7 @@
 import UIKit
 
 public final class Constants {
-    public final class Share {
-        public static let MAIL_SUBJECT = ""
+    public final class Mail {
+        public static let MAIL_SUBJECT = "[YourIDFA]"
     }
 }
