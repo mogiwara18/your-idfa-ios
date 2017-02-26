@@ -31,6 +31,12 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Public
+    
+    public func reload() {
+        self.request()
+    }
+    
     // MARK: - Private
     
     private func initialize() {
@@ -102,6 +108,6 @@ final class HomeViewController: UITableViewController, ActionDelegate {
     // MARK: - ActionDelegate
     
     func action(item: Item) {
-        // TODO
+        self.handler.action(item: item)
     }
 }

@@ -21,6 +21,7 @@
 		5C1F0CA21E61561D00235923 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA01E61561D00235923 /* SettingCell.xib */; };
 		5C1F0CA41E615F9600235923 /* SettingCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */; };
 		5C1F0CA61E616D3A00235923 /* ActionCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */; };
+		5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1F0CA71E61991D00235923 /* MessageUI.framework */; };
 		5C7A03941E5974B8001F2BCF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03931E5974B8001F2BCF /* HomeModel.swift */; };
 		5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7A03951E5974C5001F2BCF /* AdSupport.framework */; };
 		5C7A03981E59782B001F2BCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03971E59782B001F2BCF /* Constants.swift */; };
@@ -90,6 +91,7 @@
 		5C1F0CA01E61561D00235923 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		5C1F0CA31E615F9600235923 /* SettingCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCellConvertible.swift; sourceTree = "<group>"; };
 		5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCellConvertible.swift; sourceTree = "<group>"; };
+		5C1F0CA71E61991D00235923 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5C7A03931E5974B8001F2BCF /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5C7A03951E5974C5001F2BCF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		5C7A03971E59782B001F2BCF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */,
 				5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */,
 				0C5A874B8D9976AA1A1183D3 /* Pods_YourIDFA.framework in Frameworks */,
 			);
@@ -341,6 +344,7 @@
 		6FC317826E7FB936143C0337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C1F0CA71E61991D00235923 /* MessageUI.framework */,
 				5C7A03951E5974C5001F2BCF /* AdSupport.framework */,
 				989E7F10C4AC8A009CE58F86 /* Pods_YourIDFA.framework */,
 				B042B9C182A854AB34C2DCD7 /* Pods_YourIDFATests.framework */,
