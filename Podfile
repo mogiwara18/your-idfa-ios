@@ -7,6 +7,9 @@ target 'YourIDFA' do
 
   # Pods for YourIDFA
   pod 'Material', '~> 2.0'
+  
+  # 3rd Party SDK
+  pod 'Firebase/Core'
 
   target 'YourIDFATests' do
     inherit! :search_paths
