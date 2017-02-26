@@ -10,6 +10,8 @@ target 'YourIDFA' do
   
   # 3rd Party SDK
   pod 'Firebase/Core'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'YourIDFATests' do
     inherit! :search_paths
