@@ -23,6 +23,7 @@
 		5C1F0CA61E616D3A00235923 /* ActionCellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */; };
 		5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1F0CA71E61991D00235923 /* MessageUI.framework */; };
 		5C4124A51E62F01A00A6409B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C4124A41E62F01A00A6409B /* GoogleService-Info.plist */; };
+		5C4124A81E63005000A6409B /* Constants+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4124A71E63005000A6409B /* Constants+Extension.swift */; };
 		5C7A03941E5974B8001F2BCF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03931E5974B8001F2BCF /* HomeModel.swift */; };
 		5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7A03951E5974C5001F2BCF /* AdSupport.framework */; };
 		5C7A03981E59782B001F2BCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03971E59782B001F2BCF /* Constants.swift */; };
@@ -94,6 +95,7 @@
 		5C1F0CA51E616D3A00235923 /* ActionCellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCellConvertible.swift; sourceTree = "<group>"; };
 		5C1F0CA71E61991D00235923 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5C4124A41E62F01A00A6409B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "deploy/youridfa/ios/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5C4124A71E63005000A6409B /* Constants+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Constants+Extension.swift"; path = "deploy/youridfa/ios/Constants+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		5C7A03931E5974B8001F2BCF /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5C7A03951E5974C5001F2BCF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		5C7A03971E59782B001F2BCF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				5C066CF11E588FC000C2857D /* Entity */,
 				5C066CEC1E58807F00C2857D /* Common */,
 				5CE59DA31E5862E40059324A /* AppDelegate.swift */,
+				5C4124A71E63005000A6409B /* Constants+Extension.swift */,
 				5C7A03971E59782B001F2BCF /* Constants.swift */,
 				5CE59DA71E5862E40059324A /* Main.storyboard */,
 				5CE59DAA1E5862E40059324A /* Assets.xcassets */,
@@ -699,6 +702,7 @@
 				5C066CF01E58854C00C2857D /* Device.swift in Sources */,
 				5C066CFD1E58A1F400C2857D /* ActionHandler.swift in Sources */,
 				5CB793141E608DFD0044CCCE /* LicenseViewController.swift in Sources */,
+				5C4124A81E63005000A6409B /* Constants+Extension.swift in Sources */,
 				5C7A03B81E59A1A4001F2BCF /* ActionType.swift in Sources */,
 				5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */,
 				5C1F0CA61E616D3A00235923 /* ActionCellConvertible.swift in Sources */,
