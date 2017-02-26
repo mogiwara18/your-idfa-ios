@@ -7,7 +7,72 @@
 //
 
 import UIKit
+import Firebase
 
-class Analytics: NSObject {
+public protocol AnalyticsConvertible {
+    
+    var eventName: String { get }
+    
+    var parameters: [String: NSObject]? { get }
+}
 
+public enum EventType: AnalyticsConvertible {
+    case reload
+    case copy
+    case sendMail
+    case share
+    case pressMenu
+    case viewAboutIdfa
+    case viewLicense
+    
+    // MARK: - AnalyticsConvertible
+    
+    public var eventName: String {
+        switch self {
+        case .reload:
+            return kFIREventSelectContent
+        case .copy:
+            return kFIREventSelectContent
+        case .sendMail:
+            return kFIREventSelectContent
+        case .share:
+            return kFIREventShare
+        case .pressMenu:
+            return "press_menu"
+        case .viewAboutIdfa:
+            return "view_about_idfa"
+        case .viewLicense:
+            return "view_license"
+        }
+    }
+    
+    public var parameters: [String : NSObject]? {
+        switch self {
+        case .reload:
+            return [kFIRParameterContentType: "reload" as NSObject]
+        case .copy:
+            return [kFIRParameterContentType: "copy" as NSObject]
+        case .sendMail:
+            return [kFIRParameterContentType: "send_mail" as NSObject]
+        default:
+            return nil
+        }
+    }
+}
+
+public final class Analytics {
+    
+    // MARK: - Singleton
+    
+    public static let shared = Analytics()
+    
+    // MARK: - Public
+    
+    public func configure() {
+        FIRApp.configure()
+    }
+    
+    public func sendEvent(type: AnalyticsConvertible) {
+        FIRAnalytics.logEvent(withName: type.eventName, parameters: type.parameters)
+    }
 }
