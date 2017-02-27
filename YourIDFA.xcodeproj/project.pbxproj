@@ -43,6 +43,7 @@
 		5C7A03BE1E59BA34001F2BCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */; };
 		5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */; };
 		5C7A03C31E59D155001F2BCF /* IdfaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03C21E59D155001F2BCF /* IdfaService.swift */; };
+		5C9CA5111E64705500CB2B5C /* MobileInsight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9CA5101E64705500CB2B5C /* MobileInsight.framework */; };
 		5CB793141E608DFD0044CCCE /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB793131E608DFD0044CCCE /* LicenseViewController.swift */; };
 		5CB793161E608F070044CCCE /* AboutIdfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */; };
 		5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */; };
@@ -115,6 +116,8 @@
 		5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5C7A03C21E59D155001F2BCF /* IdfaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdfaService.swift; sourceTree = "<group>"; };
+		5C9CA5101E64705500CB2B5C /* MobileInsight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileInsight.framework; sourceTree = "<group>"; };
+		5C9CA5121E6470BE00CB2B5C /* YourIDFA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourIDFA-Bridging-Header.h"; sourceTree = "<group>"; };
 		5CB793131E608DFD0044CCCE /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutIdfaViewController.swift; sourceTree = "<group>"; };
 		5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */,
+				5C9CA5111E64705500CB2B5C /* MobileInsight.framework in Frameworks */,
 				5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */,
 				0C5A874B8D9976AA1A1183D3 /* Pods_YourIDFA.framework in Frameworks */,
 			);
@@ -283,6 +287,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		5C9CA50F1E646FF000CB2B5C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				5C9CA5101E64705500CB2B5C /* MobileInsight.framework */,
+				5C9CA5121E6470BE00CB2B5C /* YourIDFA-Bridging-Header.h */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		5CE59D971E5862E40059324A = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +321,7 @@
 		5CE59DA21E5862E40059324A /* YourIDFA */ = {
 			isa = PBXGroup;
 			children = (
+				5C9CA50F1E646FF000CB2B5C /* Framework */,
 				5C1F0C9C1E613C3F00235923 /* Assets */,
 				5C7A03C11E59D0FF001F2BCF /* Service */,
 				5C7A039A1E597920001F2BCF /* ViewController */,
@@ -451,6 +465,7 @@
 					5CE59D9F1E5862E40059324A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = R3AGY98K5V;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					5CE59DB31E5862E40059324A = {
@@ -859,12 +874,19 @@
 			baseConfigurationReference = 5263B09021A593DD1AF09300 /* Pods-YourIDFA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R3AGY98K5V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YourIDFA/Framework",
+				);
 				INFOPLIST_FILE = YourIDFA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.YourIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YourIDFA/Framework/YourIDFA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -874,12 +896,18 @@
 			baseConfigurationReference = 4EDD0A10947046C38685A1B9 /* Pods-YourIDFA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R3AGY98K5V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YourIDFA/Framework",
+				);
 				INFOPLIST_FILE = YourIDFA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.YourIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YourIDFA/Framework/YourIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
