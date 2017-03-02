@@ -16,6 +16,14 @@ public final class Tracker {
     
     // MARK: - Public
     
+    public func start() {
+        MobileInsight.startTrack(withAppID: "", appSecret: "")
+    }
+    
+    public func setOpenURL(url: URL) {
+        MobileInsight.setOpen(url)
+    }
+    
     public func sendAllEvent() {
         self.sendStartSessionEvent()
         self.sendViewProductEvent()
