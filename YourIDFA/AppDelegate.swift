@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // firebase
         Analytics.configure()
         
+        // mobile insight
+        Tracker.start()
+        
         return true
     }
 

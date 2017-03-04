@@ -21,6 +21,7 @@ final class HomeViewController: UITableViewController, ActionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Tracker.sendAllEvent()
         self.initialize()
         self.configureTableView()
         self.request()
