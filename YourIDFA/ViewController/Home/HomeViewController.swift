@@ -54,6 +54,7 @@ final class HomeViewController: UITableViewController, ActionDelegate {
     }
     
     @IBAction func pressMenuButton(_ sender: Any) {
+        Analytics.sendEvent(type: EventType.pressMenu)
         let settingVC = UIStoryboard.settingViewController()
         self.present(settingVC, animated: true, completion: nil)
     }

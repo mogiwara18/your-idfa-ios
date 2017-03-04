@@ -52,6 +52,19 @@ final class ActionCell: UITableViewCell {
             return
         }
         
+        switch item.action {
+        case .Reload:
+            Analytics.sendEvent(type: EventType.reload)
+        case .Copy:
+            Analytics.sendEvent(type: EventType.copy)
+        case .Send:
+            Analytics.sendEvent(type: EventType.sendMail)
+        case .Share:
+            Analytics.sendEvent(type: EventType.share)
+        case .Other:
+            ()
+        }
+        
         self.delegate?.action(item: item)
     }
 }

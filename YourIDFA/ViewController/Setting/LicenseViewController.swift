@@ -19,6 +19,7 @@ final class LicenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Analytics.sendEvent(type: EventType.viewLicense)
         self.loadLicense()
     }
 

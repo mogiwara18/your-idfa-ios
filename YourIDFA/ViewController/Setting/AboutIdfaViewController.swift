@@ -15,7 +15,7 @@ final class AboutIdfaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Analytics.sendEvent(type: EventType.viewAboutIdfa)
     }
 
     override func didReceiveMemoryWarning() {
