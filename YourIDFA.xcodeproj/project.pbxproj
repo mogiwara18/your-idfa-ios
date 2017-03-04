@@ -46,6 +46,12 @@
 		5C9CA5111E64705500CB2B5C /* MobileInsight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9CA5101E64705500CB2B5C /* MobileInsight.framework */; };
 		5CB793141E608DFD0044CCCE /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB793131E608DFD0044CCCE /* LicenseViewController.swift */; };
 		5CB793161E608F070044CCCE /* AboutIdfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */; };
+		5CCD5D011E6AB398006E7D0F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D001E6AB398006E7D0F /* CoreTelephony.framework */; };
+		5CCD5D031E6AB3B9006E7D0F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D021E6AB3B9006E7D0F /* Security.framework */; };
+		5CCD5D051E6AB44B006E7D0F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D041E6AB44B006E7D0F /* SystemConfiguration.framework */; };
+		5CCD5D071E6AB499006E7D0F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D061E6AB499006E7D0F /* libsqlite3.0.tbd */; };
+		5CCD5D091E6AB4F1006E7D0F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D081E6AB4F1006E7D0F /* libz.tbd */; };
+		5CCD5D0B1E6AB66D006E7D0F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D0A1E6AB66D006E7D0F /* SafariServices.framework */; };
 		5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */; };
 		5CDCF1891E5BDDBD003C2C4F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1881E5BDDBD003C2C4F /* Setting.swift */; };
 		5CDCF18B1E5BDDCA003C2C4F /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */; };
@@ -120,6 +126,12 @@
 		5C9CA5121E6470BE00CB2B5C /* YourIDFA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourIDFA-Bridging-Header.h"; sourceTree = "<group>"; };
 		5CB793131E608DFD0044CCCE /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutIdfaViewController.swift; sourceTree = "<group>"; };
+		5CCD5D001E6AB398006E7D0F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		5CCD5D021E6AB3B9006E7D0F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5CCD5D041E6AB44B006E7D0F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5CCD5D061E6AB499006E7D0F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5CCD5D081E6AB4F1006E7D0F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5CCD5D0A1E6AB66D006E7D0F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5CDCF1881E5BDDBD003C2C4F /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
@@ -147,6 +159,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCD5D0B1E6AB66D006E7D0F /* SafariServices.framework in Frameworks */,
+				5CCD5D091E6AB4F1006E7D0F /* libz.tbd in Frameworks */,
+				5CCD5D071E6AB499006E7D0F /* libsqlite3.0.tbd in Frameworks */,
+				5CCD5D051E6AB44B006E7D0F /* SystemConfiguration.framework in Frameworks */,
+				5CCD5D031E6AB3B9006E7D0F /* Security.framework in Frameworks */,
+				5CCD5D011E6AB398006E7D0F /* CoreTelephony.framework in Frameworks */,
 				5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */,
 				5C9CA5111E64705500CB2B5C /* MobileInsight.framework in Frameworks */,
 				5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */,
@@ -364,6 +382,12 @@
 		6FC317826E7FB936143C0337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CCD5D0A1E6AB66D006E7D0F /* SafariServices.framework */,
+				5CCD5D081E6AB4F1006E7D0F /* libz.tbd */,
+				5CCD5D061E6AB499006E7D0F /* libsqlite3.0.tbd */,
+				5CCD5D041E6AB44B006E7D0F /* SystemConfiguration.framework */,
+				5CCD5D021E6AB3B9006E7D0F /* Security.framework */,
+				5CCD5D001E6AB398006E7D0F /* CoreTelephony.framework */,
 				5C1F0CA71E61991D00235923 /* MessageUI.framework */,
 				5C7A03951E5974C5001F2BCF /* AdSupport.framework */,
 				989E7F10C4AC8A009CE58F86 /* Pods_YourIDFA.framework */,
