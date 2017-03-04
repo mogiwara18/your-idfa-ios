@@ -31,7 +31,8 @@ public final class Tracker {
     // MARK: - Private
     
     private func start() {
-        MobileInsight.startTrack(withAppID: "", appSecret: "")
+        MobileInsight.startTrack(withAppID: Constants.MobileInsight.APP_ID,
+                                 appSecret: Constants.MobileInsight.APP_SECRET)
     }
     
     private func setOpenURL(url: URL) {
