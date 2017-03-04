@@ -68,11 +68,21 @@ public final class Analytics {
     
     // MARK: - Public
     
-    public func configure() {
+    public static func configure() {
+        self.shared.configure()
+    }
+    
+    public static func sendEvent(type: AnalyticsConvertible) {
+        self.shared.sendEvent(type: type)
+    }
+    
+    // MARK: - Private
+    
+    private func configure() {
         FIRApp.configure()
     }
     
-    public func sendEvent(type: AnalyticsConvertible) {
+    private func sendEvent(type: AnalyticsConvertible) {
         FIRAnalytics.logEvent(withName: type.eventName, parameters: type.parameters)
     }
 }

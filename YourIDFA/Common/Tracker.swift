@@ -16,15 +16,29 @@ public final class Tracker {
     
     // MARK: - Public
     
-    public func start() {
+    public static func start() {
+        self.shared.start()
+    }
+    
+    public static func setOpenURL(url: URL) {
+        self.shared.setOpenURL(url: url)
+    }
+    
+    public static func sendAllEvent() {
+        self.shared.sendAllEvent()
+    }
+    
+    // MARK: - Private
+    
+    private func start() {
         MobileInsight.startTrack(withAppID: "", appSecret: "")
     }
     
-    public func setOpenURL(url: URL) {
+    private func setOpenURL(url: URL) {
         MobileInsight.setOpen(url)
     }
     
-    public func sendAllEvent() {
+    private func sendAllEvent() {
         self.sendStartSessionEvent()
         self.sendViewProductEvent()
         self.sendAddCartEvent()
@@ -48,8 +62,6 @@ public final class Tracker {
         self.sendCustom3Event()
         self.sendReservationEvent()
     }
-    
-    // MARK: - Private
     
     private func sendStartSessionEvent() {
         let event = MISEvent.startSession()
