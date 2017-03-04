@@ -52,6 +52,7 @@
 		5CCD5D071E6AB499006E7D0F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D061E6AB499006E7D0F /* libsqlite3.0.tbd */; };
 		5CCD5D091E6AB4F1006E7D0F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D081E6AB4F1006E7D0F /* libz.tbd */; };
 		5CCD5D0B1E6AB66D006E7D0F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D0A1E6AB66D006E7D0F /* SafariServices.framework */; };
+		5CCD5D0E1E6ACBD7006E7D0F /* AppDelegate+Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD5D0D1E6ACBD7006E7D0F /* AppDelegate+Deeplink.swift */; };
 		5CDCF1871E5BDD9D003C2C4F /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */; };
 		5CDCF1891E5BDDBD003C2C4F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF1881E5BDDBD003C2C4F /* Setting.swift */; };
 		5CDCF18B1E5BDDCA003C2C4F /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */; };
@@ -132,6 +133,7 @@
 		5CCD5D061E6AB499006E7D0F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		5CCD5D081E6AB4F1006E7D0F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5CCD5D0A1E6AB66D006E7D0F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		5CCD5D0D1E6ACBD7006E7D0F /* AppDelegate+Deeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Deeplink.swift"; sourceTree = "<group>"; };
 		5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5CDCF1881E5BDDBD003C2C4F /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
@@ -314,6 +316,14 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		5CCD5D0C1E6AC7B5006E7D0F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5CCD5D0D1E6ACBD7006E7D0F /* AppDelegate+Deeplink.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		5CE59D971E5862E40059324A = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +349,7 @@
 		5CE59DA21E5862E40059324A /* YourIDFA */ = {
 			isa = PBXGroup;
 			children = (
+				5CCD5D0C1E6AC7B5006E7D0F /* Application */,
 				5C9CA50F1E646FF000CB2B5C /* Framework */,
 				5C1F0C9C1E613C3F00235923 /* Assets */,
 				5C7A03C11E59D0FF001F2BCF /* Service */,
@@ -720,6 +731,7 @@
 				5CDCF18B1E5BDDCA003C2C4F /* SettingType.swift in Sources */,
 				5C066CF71E58933A00C2857D /* ItemType.swift in Sources */,
 				5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */,
+				5CCD5D0E1E6ACBD7006E7D0F /* AppDelegate+Deeplink.swift in Sources */,
 				5C7A03A21E597B15001F2BCF /* Analytics.swift in Sources */,
 				5C7A03981E59782B001F2BCF /* Constants.swift in Sources */,
 				5C066CF31E588FE800C2857D /* Item.swift in Sources */,
