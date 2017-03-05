@@ -127,6 +127,8 @@
 		5C9CA5121E6470BE00CB2B5C /* YourIDFA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourIDFA-Bridging-Header.h"; sourceTree = "<group>"; };
 		5CB793131E608DFD0044CCCE /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutIdfaViewController.swift; sourceTree = "<group>"; };
+		5CBA6DB01E6BEB0E000B0B18 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		5CBA6DB11E6BEBB8000B0B18 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configurations/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		5CCD5D001E6AB398006E7D0F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5CCD5D021E6AB3B9006E7D0F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5CCD5D041E6AB44B006E7D0F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -316,6 +318,15 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		5CBA6DAF1E6BEAE4000B0B18 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				5CBA6DB01E6BEB0E000B0B18 /* Debug.xcconfig */,
+				5CBA6DB11E6BEBB8000B0B18 /* Release.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
 		5CCD5D0C1E6AC7B5006E7D0F /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +360,7 @@
 		5CE59DA21E5862E40059324A /* YourIDFA */ = {
 			isa = PBXGroup;
 			children = (
+				5CBA6DAF1E6BEAE4000B0B18 /* Configurations */,
 				5CCD5D0C1E6AC7B5006E7D0F /* Application */,
 				5C9CA50F1E646FF000CB2B5C /* Framework */,
 				5C1F0C9C1E613C3F00235923 /* Assets */,
