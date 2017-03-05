@@ -5,3 +5,8 @@
 //  Created by naoto yamaguchi on 2017/03/05.
 //  Copyright © 2017年 naoto yamaguchi. All rights reserved.
 //
+
+PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.YourIDFA
+PRODUCT_NAME = $(TARGET_NAME)
+
+OTHER_SWIFT_FLAGS = $(inherited)
