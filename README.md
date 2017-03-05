@@ -73,6 +73,12 @@ $ fastlane match --force_for_new_devices deveopment
 
 - [MobileInsight](https://ymi.yahoo.co.jp/)
 
+## TODO
+
+- [ ] setting xcconfig
+- [ ] build in CI service
+- [ ] update fastlane script
+
 ## License
 
 ```
