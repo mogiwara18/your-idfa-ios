@@ -29,6 +29,11 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
+### ios certs
+```
+fastlane ios certs
+```
+Fetchs certificates and provisioning profiles.
 ### ios test
 ```
 fastlane ios test
