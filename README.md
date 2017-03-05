@@ -76,7 +76,7 @@ $ fastlane match --force_for_new_devices deveopment
 ## TODO
 
 - [☓] setting xcconfig
-- [ ] setting lint
+- [ ] setting SwiftLint
 - [ ] build in CI service
 - [ ] update fastlane script
 
