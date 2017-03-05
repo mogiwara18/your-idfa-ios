@@ -12,6 +12,13 @@ public final class AppIdentifier {
     
     // MARK: - Public
     
+    public static func bundleID() -> String {
+        guard let identifier = Bundle.main.bundleIdentifier else {
+            return ""
+        }
+        return identifier
+    }
+    
     public static func appVersion() -> String {
         guard let info = Bundle.main.infoDictionary,
             let version = info["CFBundleShortVersionString"] as? String else {
