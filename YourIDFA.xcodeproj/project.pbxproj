@@ -139,7 +139,7 @@
 		5CDCF1861E5BDD9D003C2C4F /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5CDCF1881E5BDDBD003C2C4F /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		5CDCF18A1E5BDDCA003C2C4F /* SettingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
-		5CE59DA01E5862E40059324A /* YourIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE59DA01E5862E40059324A /* YourIDFA(D).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YourIDFA(D).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE59DA31E5862E40059324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CE59DA81E5862E40059324A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CE59DAA1E5862E40059324A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 		5CE59DA11E5862E40059324A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5CE59DA01E5862E40059324A /* YourIDFA.app */,
+				5CE59DA01E5862E40059324A /* YourIDFA(D).app */,
 				5CE59DB41E5862E40059324A /* YourIDFATests.xctest */,
 				5CE59DBF1E5862E40059324A /* YourIDFAUITests.xctest */,
 			);
@@ -454,7 +454,7 @@
 			);
 			name = YourIDFA;
 			productName = YourIDFA;
-			productReference = 5CE59DA01E5862E40059324A /* YourIDFA.app */;
+			productReference = 5CE59DA01E5862E40059324A /* YourIDFA(D).app */;
 			productType = "com.apple.product-type.application";
 		};
 		5CE59DB31E5862E40059324A /* YourIDFATests */ = {
@@ -933,8 +933,6 @@
 				INFOPLIST_FILE = YourIDFA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.YourIDFA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YourIDFA/Framework/YourIDFA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -955,8 +953,6 @@
 				INFOPLIST_FILE = YourIDFA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.YourIDFA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YourIDFA/Framework/YourIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
