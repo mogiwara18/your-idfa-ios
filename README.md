@@ -76,6 +76,7 @@ $ fastlane match --force_for_new_devices deveopment
 ## TODO
 
 - [ ] setting xcconfig
+- [ ] fix build scheme
 - [ ] build in CI service
 - [ ] update fastlane script
 
