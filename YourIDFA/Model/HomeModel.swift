@@ -29,7 +29,7 @@ public final class HomeModel {
             case .Header, .Idfa, .Optout:
                 let item = Item(idfa: idfa, type: itemType, action: .Other)
                 items.append(item)
-            case .Action(let actionType):
+            case let .Action(actionType):
                 let item = Item(idfa: idfa, type: itemType, action: actionType)
                 items.append(item)
                 break
