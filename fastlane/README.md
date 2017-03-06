@@ -29,11 +29,11 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
-### ios sh_test
+### ios bootstrap
 ```
-fastlane ios sh_test
+fastlane ios bootstrap
 ```
-
+Bootstrap
 ### ios certs
 ```
 fastlane ios certs
