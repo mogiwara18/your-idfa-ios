@@ -29,11 +29,38 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
+### ios sh_test
+```
+fastlane ios sh_test
+```
+
 ### ios certs
 ```
 fastlane ios certs
 ```
-Fetchs certificates and provisioning profiles.
+Fetchs certificates and provisioning profiles
+
+if not existing cer and provisioning, fastlane create them
+### ios debug_build
+```
+fastlane ios debug_build
+```
+Debug build
+### ios adhoc_build
+```
+fastlane ios adhoc_build
+```
+Adhoc build
+### ios release_build
+```
+fastlane ios release_build
+```
+Release build
+### ios deploy_metadata
+```
+fastlane ios deploy_metadata
+```
+Deploy Metadata
 ### ios test
 ```
 fastlane ios test
@@ -46,9 +73,9 @@ fastlane ios beta
 Submit a new Beta Build to Apple TestFlight
 
 This will also make sure the profile is up to date
-### ios release
+### ios appstore
 ```
-fastlane ios release
+fastlane ios appstore
 ```
 Deploy a new version to the App Store
 

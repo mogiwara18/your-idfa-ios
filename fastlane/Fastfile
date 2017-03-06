@@ -17,19 +17,48 @@ default_platform :ios
 
 platform :ios do
   before_all do
+    # TODO: setting slack
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
 
+    cocoapods
   end
 
-  desc "Fetchs certificates and provisioning profiles."
+  desc "Bootstrap"
+  lane :bootstrap do
+    sh "git submodule update --init --recursive"
+    certs
+  end
+
+  desc "Fetchs certificates and provisioning profiles"
+  desc "if not existing cer and provisioning, fastlane create them"
   lane :certs do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore")
   end
 
+  desc "Debug build"
+  lane :debug_build do
+    gym(configuration: "Debug")
+  end
+
+  desc "Adhoc build"
+  lane :adhoc_build do
+    # TODO: gym command
+  end
+
+  desc "Release build"
+  lane :release_build do
+    gym(configuration: "Release")
+  end
+
+  desc "Deploy Metadata"
+  lane :deploy_metadata do
+    deliver(metadata_only: true)
+  end
+
   desc "Runs all the tests"
   lane :test do
+    # TODO: create test scheme, run test
     scan
   end
 
@@ -45,7 +74,7 @@ platform :ios do
   end
 
   desc "Deploy a new version to the App Store"
-  lane :release do
+  lane :appstore do
     # match(type: "appstore")
     # snapshot
     gym(scheme: "YourIDFA") # Build your app - more options available
@@ -58,19 +87,20 @@ platform :ios do
   after_all do |lane|
     # This block is called, only if the executed lane was successful
 
+    # TODO: post slack
     # slack(
     #   message: "Successfully deployed new App Update."
     # )
   end
 
   error do |lane, exception|
+    # TODO: post slack
     # slack(
     #   message: exception.message,
     #   success: false
     # )
   end
 end
-
 
 # More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
 # All available actions: https://docs.fastlane.tools/actions
