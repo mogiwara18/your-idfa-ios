@@ -77,7 +77,7 @@ $ fastlane match --force_for_new_devices deveopment
 
 - [☓] setting xcconfig
 - [ ] setting SwiftLint
-- [ ] build in CI service
+- [ ] build in Bitrise CI
 - [ ] update fastlane script
 
 ## License
