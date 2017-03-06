@@ -38,6 +38,7 @@ platform :ios do
 
   desc "Debug build"
   lane :debug_build do
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
     gym(configuration: "Debug")
   end
 
@@ -48,6 +49,7 @@ platform :ios do
 
   desc "Release build"
   lane :release_build do
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore")
     gym(configuration: "Release")
   end
 
