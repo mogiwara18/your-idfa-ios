@@ -44,7 +44,7 @@ platform :ios do
 
   desc "Adhoc build"
   lane :adhoc_build do
-    # TODO: gym command
+    # TODO: setting adhoc build.
   end
 
   desc "Release build"
@@ -77,11 +77,8 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :deploy do
-    # match(type: "appstore")
-    # snapshot
-    gym(scheme: "YourIDFA") # Build your app - more options available
-    deliver(force: true)
-    # frameit
+    release_build
+    deliver(force: true) # or appstore
   end
 
   # You can define as many lanes as you want
