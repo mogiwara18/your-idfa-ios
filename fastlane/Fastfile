@@ -60,8 +60,8 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    # TODO: create test scheme, run test
-    scan
+    # TODO: create test scheme and run test
+    # scan
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -76,7 +76,7 @@ platform :ios do
   end
 
   desc "Deploy a new version to the App Store"
-  lane :appstore do
+  lane :deploy do
     # match(type: "appstore")
     # snapshot
     gym(scheme: "YourIDFA") # Build your app - more options available
