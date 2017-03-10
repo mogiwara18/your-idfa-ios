@@ -38,7 +38,7 @@ platform :ios do
 
   desc "Debug build"
   lane :debug_build do
-    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: true)
     gym(configuration: "Debug")
   end
 
