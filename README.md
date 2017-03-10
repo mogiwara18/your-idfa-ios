@@ -2,6 +2,7 @@
 
 # YourIDFA
 
+[![Build Status](https://www.bitrise.io/app/196577456afab774.svg?token=lr2_94T07NcveLipX8R0DQ&branch=master)](https://www.bitrise.io/app/196577456afab774)
 [![GitHub release](https://img.shields.io/github/release/naoto0822/your-idfa-ios.svg)](https://github.com/naoto0822/your-idfa-ios/releases)
 [![GitHub issues](https://img.shields.io/github/issues/naoto0822/your-idfa-ios.svg)](https://github.com/naoto0822/your-idfa-ios/issues)
 [![license](https://img.shields.io/github/license/naoto0822/your-idfa-ios.svg)](https://github.com/naoto0822/your-idfa-ios/blob/master/LICENSE)
