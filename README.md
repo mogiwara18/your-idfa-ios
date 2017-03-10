@@ -22,26 +22,19 @@ You can confirm IDFA/Optout of this device installed YourIDFA.
  $ git clone https://github.com/naoto0822/your-gaid-android.git
  ```
 
-2. clone submodule repository.
-
- ```sh
- $ git submodule update --init --recursive
- ```
-
-3. setup Gem and CocoaPods.
+2. setup Gem. (after setting `bundler`)
 
  ```sh
  $ bundle install
- $ pod install
  ```
 
-4. install certificates and provisioning profile.
+3. bootstrap. (exec `pod install`, `git submodule ~`, `fastlane match` commands)
 
  ```sh
- $ fastlane match development
+ $ bundle exec fastlane ios bootstrap
  ```
 
-5. open Xcode project.
+4. open Xcode project.
 
  ```sh
  $ open `YourIDFA.xcworkspace`
