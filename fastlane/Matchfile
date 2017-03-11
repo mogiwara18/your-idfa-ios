@@ -1,4 +1,4 @@
-git_url "https://github.com/naoto0822/certificates-ios"
+git_url "git@github.com:naoto0822/certificates-ios.git"
 
 type "development" # The default type, can be: appstore, adhoc or development
 
