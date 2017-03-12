@@ -99,7 +99,7 @@ platform :ios do
       ipa_path: "./build/YourIDFA(B).ipa",
       notifications: true,
       notes: "Publish Adhoc ipa.",
-      groups: "tester"
+      groups: ["tester"]
     )
   end
 
