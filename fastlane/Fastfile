@@ -44,6 +44,7 @@ platform :ios do
 
   desc "Debug build"
   lane :debug_build do
+    create_temporary_keychain
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: true)
     gym(configuration: "Debug")
   end
@@ -86,6 +87,17 @@ platform :ios do
     cocoapods
     release_build
     deliver(force: true) # or appstore
+  end
+
+  desc "Create temp keychain"
+  private_lane :create_temporary_keychain do
+    if is_ci?
+      create_keychain(
+        name: ENV["MATCH_KEYCHAIN_NAME"],
+        password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+        timeout: 1800
+      )
+    end
   end
 
   after_all do |lane|
