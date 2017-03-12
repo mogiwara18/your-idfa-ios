@@ -836,7 +836,7 @@
 /* Begin XCBuildConfiguration section */
 		5C845E8C1E7581E90055A878 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CBA6DB11E6BEBB8000B0B18 /* Release.xcconfig */;
+			baseConfigurationReference = 5C845E901E75826A0055A878 /* Adhoc.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
