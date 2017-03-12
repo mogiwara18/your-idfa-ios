@@ -1,0 +1,12 @@
+//
+//  Adhoc.xcconfig
+//  YourIDFA
+//
+//  Created by naoto yamaguchi on 2017/03/12.
+//  Copyright © 2017年 naoto yamaguchi. All rights reserved.
+//
+
+PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.YourIDFA.adhoc
+PRODUCT_NAME = $(TARGET_NAME)(B)
+
+OTHER_SWIFT_FLAGS = $(inherited)
