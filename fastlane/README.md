@@ -29,23 +29,23 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
-### ios test_ci
-```
-fastlane ios test_ci
-```
-
 ### ios bootstrap
 ```
 fastlane ios bootstrap
 ```
 Bootstrap
-### ios certs
+### ios fetch_certificates
 ```
-fastlane ios certs
+fastlane ios fetch_certificates
 ```
 Fetchs certificates and provisioning profiles
+### ios force_certificates
+```
+fastlane ios force_certificates
+```
+Update certificates and provisioning profiles
 
-if not existing cer and provisioning, fastlane create them
+if not exists certificates and provisioning profiles, fastlane create them.
 ### ios debug_build
 ```
 fastlane ios debug_build

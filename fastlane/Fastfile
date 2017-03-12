@@ -20,20 +20,26 @@ CONF = YAML.load_file('../deploy/youridfa/ios/conf.yml')
 platform :ios do
   before_all do
     ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
-    cocoapods
   end
 
   desc "Bootstrap"
   lane :bootstrap do
+    cocoapods
     sh "git submodule update --init --recursive"
-    certs
+    fetch_certificates
   end
 
   desc "Fetchs certificates and provisioning profiles"
-  desc "if not existing cer and provisioning, fastlane create them"
-  lane :certs do
-    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
-    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore")
+  lane :fetch_certificates do
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: true)
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: true)
+  end
+
+  desc "Update certificates and provisioning profiles"
+  desc "if not exists certificates and provisioning profiles, fastlane create them."
+  lane :force_certificates do
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: false, force: true)
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: false, force: true)
   end
 
   desc "Debug build"
@@ -49,7 +55,7 @@ platform :ios do
 
   desc "Release build"
   lane :release_build do
-    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore")
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: true)
     gym(configuration: "Release")
   end
 
@@ -77,6 +83,7 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :deploy do
+    cocoapods
     release_build
     deliver(force: true) # or appstore
   end
