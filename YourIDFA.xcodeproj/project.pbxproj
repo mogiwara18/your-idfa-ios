@@ -892,8 +892,8 @@
 				INFOPLIST_FILE = YourIDFA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PROVISIONING_PROFILE = "dee32a61-fe7f-4fdd-84be-eb26ee0e7594";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.naoto.yamaguchi.YourIDFA";
+				PROVISIONING_PROFILE = "3d78c340-e172-412e-873a-6cbda82c0504";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.naoto.yamaguchi.YourIDFA.adhoc";
 				SWIFT_OBJC_BRIDGING_HEADER = "YourIDFA/Framework/YourIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
