@@ -24,6 +24,11 @@ platform :ios do
     ENV['CRASHLYTICS_BUILD_SECRET'] = CONF["fabric"]["build_secret"]
   end
 
+  desc "empty"
+  lane :empty do
+    puts "empty"
+  end
+
   desc "Bootstrap"
   lane :bootstrap do
     cocoapods
