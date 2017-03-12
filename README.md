@@ -13,7 +13,7 @@ You can confirm IDFA/Optout of this device installed YourIDFA.
 
 ## App Store
 
-> TODO: url
+[Store link](https://itunes.apple.com/jp/app/youridfa/id1142232722?mt=8)
 
 ## Getting Started
 
