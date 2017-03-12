@@ -91,7 +91,7 @@ platform :ios do
   after_all do |lane|
     if is_ci?
       slack(
-        message: "Successfully fastlane actions."
+        message: "Successfully fastlane actions :tada: "
       )
     end
   end
