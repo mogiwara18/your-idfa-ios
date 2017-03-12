@@ -12,14 +12,14 @@
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
 fastlane_version "2.16.0"
-
+fastlane_require "yaml"
 default_platform :ios
+
+CONF = YAML.load_file('../deploy/youridfa/ios/conf.yml')
 
 platform :ios do
   before_all do
-    # TODO: setting slack
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-
+    ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
     cocoapods
   end
 
@@ -81,23 +81,17 @@ platform :ios do
     deliver(force: true) # or appstore
   end
 
-  # You can define as many lanes as you want
-
   after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # TODO: post slack
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
+    slack(
+      message: "Successfully fastlane actions."
+    )
   end
 
   error do |lane, exception|
-    # TODO: post slack
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
+    slack(
+      message: exception.message,
+      success: false
+    )
   end
 end
 

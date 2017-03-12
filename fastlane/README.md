@@ -29,6 +29,11 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
+### ios test_slack
+```
+fastlane ios test_slack
+```
+
 ### ios bootstrap
 ```
 fastlane ios bootstrap
