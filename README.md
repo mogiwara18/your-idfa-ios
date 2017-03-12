@@ -73,7 +73,7 @@ $ fastlane match --force_for_new_devices deveopment
 - [ ] setting SwiftLint
 - [ ] adhoc build
 - [ ] crashlytics beta
-- [ ] build in Bitrise CI
+- [☓] build in Bitrise CI
 - [☓] update fastlane script
 
 ## License
