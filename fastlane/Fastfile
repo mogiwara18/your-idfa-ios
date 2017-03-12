@@ -82,16 +82,20 @@ platform :ios do
   end
 
   after_all do |lane|
-    slack(
-      message: "Successfully fastlane actions."
-    )
+    if is_ci?
+      slack(
+        message: "Successfully fastlane actions."
+      )
+    end
   end
 
   error do |lane, exception|
-    slack(
-      message: exception.message,
-      success: false
-    )
+    if is_ci?
+      slack(
+        message: exception.message,
+        success: false
+      )
+    end
   end
 end
 
