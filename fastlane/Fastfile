@@ -85,7 +85,17 @@ platform :ios do
 
   desc "Submit to Fabric."
   lane :fabric do
-    # TODO: crashlytics command.
+    cocoapods
+    adhoc_build
+    crashlytics(
+      crashlytics_path: "./Pods/Crashlytics/iOS/Crashlytics.framework",
+      api_token: ENV['CRASHLYTICS_API_TOKEN'],
+      build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
+      ipa_path: "./build/YourIDFA(B).ipa",
+      notifications: true,
+      notes: "Publish Adhoc ipa.",
+      groups: "tester"
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
