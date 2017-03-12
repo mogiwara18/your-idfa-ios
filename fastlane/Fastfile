@@ -20,6 +20,8 @@ CONF = YAML.load_file('../deploy/youridfa/ios/conf.yml')
 platform :ios do
   before_all do
     ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
+    ENV['CRASHLYTICS_API_TOKEN'] = CONF["fabric"]["api_token"]
+    ENV['CRASHLYTICS_BUILD_SECRET'] = CONF["fabric"]["build_secret"]
   end
 
   desc "Bootstrap"
@@ -32,13 +34,21 @@ platform :ios do
   desc "Fetchs certificates and provisioning profiles"
   lane :fetch_certificates do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: true)
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc", readonly: true)
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: true)
   end
 
-  desc "Update certificates and provisioning profiles"
   desc "if not exists certificates and provisioning profiles, fastlane create them."
+  lane :init_certificates do
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc")
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore")
+  end
+
+  desc "Force update certificates and provisioning profiles"
   lane :force_certificates do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: false, force: true)
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc", readonly: false, force: true)
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: false, force: true)
   end
 
@@ -51,7 +61,9 @@ platform :ios do
 
   desc "Adhoc build"
   lane :adhoc_build do
-    # TODO: setting adhoc build.
+    create_temporary_keychain
+    match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc", readonly: true)
+    gym(configuration: "Adhoc")
   end
 
   desc "Release build"
@@ -69,6 +81,11 @@ platform :ios do
   lane :test do
     # TODO: create test scheme and run test
     # scan
+  end
+
+  desc "Submit to Fabric."
+  lane :fabric do
+    # TODO: crashlytics command.
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"

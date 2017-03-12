@@ -39,13 +39,16 @@ Bootstrap
 fastlane ios fetch_certificates
 ```
 Fetchs certificates and provisioning profiles
+### ios init_certificates
+```
+fastlane ios init_certificates
+```
+if not exists certificates and provisioning profiles, fastlane create them.
 ### ios force_certificates
 ```
 fastlane ios force_certificates
 ```
-Update certificates and provisioning profiles
-
-if not exists certificates and provisioning profiles, fastlane create them.
+Force update certificates and provisioning profiles
 ### ios debug_build
 ```
 fastlane ios debug_build
@@ -71,6 +74,11 @@ Deploy Metadata
 fastlane ios test
 ```
 Runs all the tests
+### ios fabric
+```
+fastlane ios fabric
+```
+Submit to Fabric.
 ### ios beta
 ```
 fastlane ios beta
