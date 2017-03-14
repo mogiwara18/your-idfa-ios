@@ -105,6 +105,7 @@ platform :ios do
       notes: "Publish Adhoc ipa.",
       groups: ["tester-1-1"]
     )
+    post_slack(message: "The adhoc ipa was successfully deploy to Fabric :tada: :tada: :tada:")
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -122,10 +123,9 @@ platform :ios do
   lane :deploy do
     cocoapods
     release_build
-    deliver(force: true) # or appstore
+    appstore
   end
 
-  desc "Create temp keychain"
   private_lane :create_temporary_keychain do
     if is_ci?
       create_keychain(
@@ -136,12 +136,17 @@ platform :ios do
     end
   end
 
-  after_all do |lane|
+  private_lane :post_slack do |options|
+    message = options[:message]
     if is_ci?
       slack(
-        message: "Successfully fastlane actions :tada: "
+        message: message
       )
     end
+  end
+
+  after_all do |lane|
+    # do something...
   end
 
   error do |lane, exception|
