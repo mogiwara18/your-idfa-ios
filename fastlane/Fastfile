@@ -124,6 +124,7 @@ platform :ios do
     cocoapods
     release_build
     appstore
+    post_slack(message: "The release ipa was successfully deploy to iTunesConnect :tada: :tada: :tada:")
   end
 
   private_lane :create_temporary_keychain do
