@@ -22,6 +22,10 @@ platform :ios do
     ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
     ENV['CRASHLYTICS_API_TOKEN'] = CONF["fabric"]["api_token"]
     ENV['CRASHLYTICS_BUILD_SECRET'] = CONF["fabric"]["build_secret"]
+    ENV['FASTLANE_PASSWORD'] = CONF["fastlane"]["apple_password"]
+    ENV['MATCH_PASSWORD'] = CONF["fastlane"]["match_password"]
+    ENV['MATCH_KEYCHAIN_NAME'] = CONF["fastlane"]["match_keychain_name"]
+    ENV['MATCH_KEYCHAIN_PASSWORD'] = CONF["fastlane"]["match_keychain_password"]
   end
 
   desc "empty"
