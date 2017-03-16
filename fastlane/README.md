@@ -43,7 +43,7 @@ Fetchs certificates and provisioning profiles
 ```
 fastlane ios init_certificates
 ```
-if not exists certificates and provisioning profiles, fastlane create them
+Fastlane create certificates and provisioning profiles if not exists them
 ### ios force_certificates
 ```
 fastlane ios force_certificates

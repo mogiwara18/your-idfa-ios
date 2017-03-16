@@ -37,7 +37,7 @@ platform :ios do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: true)
   end
 
-  desc "if not exists certificates and provisioning profiles, fastlane create them"
+  desc "Fastlane create certificates and provisioning profiles if not exists them"
   lane :init_certificates do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc")
@@ -53,14 +53,12 @@ platform :ios do
 
   desc "Debug build"
   lane :debug_build do
-    create_temporary_keychain
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development", readonly: true)
     gym(configuration: "Debug")
   end
 
   desc "Adhoc build"
   lane :adhoc_build do
-    create_temporary_keychain
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc", readonly: true)
     gym(configuration: "Adhoc")
   end
