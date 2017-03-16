@@ -29,11 +29,6 @@ xcode-select --install
 </table>
 # Available Actions
 ## iOS
-### ios empty
-```
-fastlane ios empty
-```
-empty
 ### ios bootstrap
 ```
 fastlane ios bootstrap
