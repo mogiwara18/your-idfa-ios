@@ -19,13 +19,8 @@ CONF = YAML.load_file('../deploy/youridfa/ios/conf.yml')
 
 platform :ios do
   before_all do
-    ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
-    ENV['CRASHLYTICS_API_TOKEN'] = CONF["fabric"]["api_token"]
-    ENV['CRASHLYTICS_BUILD_SECRET'] = CONF["fabric"]["build_secret"]
-    ENV['FASTLANE_PASSWORD'] = CONF["fastlane"]["apple_password"]
-    ENV['MATCH_PASSWORD'] = CONF["fastlane"]["match_password"]
-    ENV['MATCH_KEYCHAIN_NAME'] = CONF["fastlane"]["match_keychain_name"]
-    ENV['MATCH_KEYCHAIN_PASSWORD'] = CONF["fastlane"]["match_keychain_password"]
+    set_env_var
+    create_temporary_keychain
   end
 
   desc "Bootstrap"
@@ -42,7 +37,7 @@ platform :ios do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA", type: "appstore", readonly: true)
   end
 
-  desc "if not exists certificates and provisioning profiles, fastlane create them."
+  desc "if not exists certificates and provisioning profiles, fastlane create them"
   lane :init_certificates do
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.debug", type: "development")
     match(app_identifier: "com.naoto.yamaguchi.YourIDFA.adhoc", type: "adhoc")
@@ -124,6 +119,20 @@ platform :ios do
 
   # Private Lane
 
+  desc "Setting env var"
+  private_lane :set_env_var do
+    ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
+    ENV['CRASHLYTICS_API_TOKEN'] = CONF["fabric"]["api_token"]
+    ENV['CRASHLYTICS_BUILD_SECRET'] = CONF["fabric"]["build_secret"]
+
+    if is_ci?
+      ENV['FASTLANE_PASSWORD'] = CONF["fastlane"]["apple_password"]
+      ENV['MATCH_PASSWORD'] = CONF["fastlane"]["match_password"]
+      ENV['MATCH_KEYCHAIN_NAME'] = CONF["fastlane"]["match_keychain_name"]
+      ENV['MATCH_KEYCHAIN_PASSWORD'] = CONF["fastlane"]["match_keychain_password"]
+    end
+  end
+
   desc "Create temp keychain for match"
   private_lane :create_temporary_keychain do
     if is_ci?
@@ -131,6 +140,15 @@ platform :ios do
         name: ENV["MATCH_KEYCHAIN_NAME"],
         password: ENV["MATCH_KEYCHAIN_PASSWORD"],
         timeout: 1800
+      )
+    end
+  end
+
+  desc "Delete temp keychain for match"
+  private_lane :delete_temporary_keychain do
+    if is_ci?
+      delete_keychain(
+        name: ENV["MATCH_KEYCHAIN_NAME"]
       )
     end
   end
@@ -146,7 +164,7 @@ platform :ios do
   end
 
   after_all do |lane|
-    # do something...
+    delete_temporary_keychain
   end
 
   error do |lane, exception|
