@@ -28,11 +28,6 @@ platform :ios do
     ENV['MATCH_KEYCHAIN_PASSWORD'] = CONF["fastlane"]["match_keychain_password"]
   end
 
-  desc "empty"
-  lane :empty do
-    puts "empty"
-  end
-
   desc "Bootstrap"
   lane :bootstrap do
     cocoapods
@@ -127,6 +122,9 @@ platform :ios do
     post_slack(message: "The release ipa was successfully deploy to iTunesConnect :tada: :tada: :tada:")
   end
 
+  # Private Lane
+
+  desc "Create temp keychain for match"
   private_lane :create_temporary_keychain do
     if is_ci?
       create_keychain(
@@ -137,6 +135,7 @@ platform :ios do
     end
   end
 
+  desc "Post slack message"
   private_lane :post_slack do |options|
     message = options[:message]
     if is_ci?
