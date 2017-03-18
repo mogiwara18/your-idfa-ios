@@ -105,6 +105,7 @@
 		5C1F0CA71E61991D00235923 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5C4124A41E62F01A00A6409B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "deploy/youridfa/ios/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5C4124A71E63005000A6409B /* Constants+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Constants+Extension.swift"; path = "deploy/youridfa/ios/Constants+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		5C58AEAF1E7CFE8A00BFAFF7 /* YourIDFA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YourIDFA.entitlements; sourceTree = "<group>"; };
 		5C7A03931E5974B8001F2BCF /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5C7A03951E5974C5001F2BCF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		5C7A03971E59782B001F2BCF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -365,6 +366,7 @@
 		5CE59DA21E5862E40059324A /* YourIDFA */ = {
 			isa = PBXGroup;
 			children = (
+				5C58AEAF1E7CFE8A00BFAFF7 /* YourIDFA.entitlements */,
 				5CBA6DAF1E6BEAE4000B0B18 /* Configurations */,
 				5CCD5D0C1E6AC7B5006E7D0F /* Application */,
 				5C9CA50F1E646FF000CB2B5C /* Framework */,
@@ -522,6 +524,11 @@
 						DevelopmentTeam = R3AGY98K5V;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					5CE59DB31E5862E40059324A = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -883,6 +890,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = YourIDFA/YourIDFA.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = R3AGY98K5V;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1029,6 +1037,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = YourIDFA/YourIDFA.entitlements;
 				DEVELOPMENT_TEAM = R3AGY98K5V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1051,6 +1060,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = YourIDFA/YourIDFA.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = R3AGY98K5V;
 				FRAMEWORK_SEARCH_PATHS = (
