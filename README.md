@@ -9,7 +9,7 @@
 
 You can confirm IDFA/Optout of this device installed YourIDFA.
 
-> TODO: screenshot
+<img src="./assets/screenshot/4.7_No01.png" width="239" height="397">
 
 ## App Store
 
@@ -47,6 +47,16 @@ You can confirm IDFA/Optout of this device installed YourIDFA.
 $ fastlane match --force_for_new_devices deveopment
 ```
 
+## CI/CD
+
+`YourIDFA.ipa` will be uploaded to iTunesConnect automatically,  
+when merged into the release branch.
+
+using [Bitrise](https://www.bitrise.io), [fastlane](https://fastlane.tools/).
+
+<img src="./assets/cicd.png" width="700" height="500">
+
+
 ## OSS
 
 - [Material](https://github.com/CosmicMind/Material)
@@ -69,12 +79,7 @@ $ fastlane match --force_for_new_devices deveopment
 
 ## TODO
 
-- [☓] setting xcconfig
 - [ ] setting SwiftLint
-- [☓] adhoc build
-- [☓] crashlytics beta
-- [☓] build in Bitrise CI
-- [☓] update fastlane script
 
 ## License
 
