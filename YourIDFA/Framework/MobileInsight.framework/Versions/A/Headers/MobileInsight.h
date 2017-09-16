@@ -12,6 +12,23 @@
 #import "MISCurrency.h"
 #import "MISItem.h"
 
+@protocol MobileInsightDeeplinkDelegate <NSObject>
+
+/// --------------------------------------------------------------------------------------
+/// @optional
+/// --------------------------------------------------------------------------------------
+@optional
+
+/**
+ * Deferred-deeplink handler. Deferred-deeplink経由でインストール、起動された際に呼ばれます.
+ *
+ * @param url Deferred-deeplink url
+ */
+- (void)onReceivedMobileInsightDeeplink:(nullable NSURL *)url;
+
+@end
+
+
 @interface MobileInsight : NSObject
 
 /// --------------------------------------------------------------------------------------
@@ -28,15 +45,24 @@
                   appSecret:(nonnull NSString *)appSecret;
 
 /**
- * `application:openURL:sourceApplication:annotation:`に必ず実装.
+ * `application:openURL:options:`に必ず実装.
  *
- * @param URL `application:openURL:sourceApplication:annotation:`のopenURLの引数を入れる.
+ * @param URL `application:openURL:options:`のopenURLの引数を入れる.
  */
 + (void)setOpenURL:(nonnull NSURL *)URL;
 
 /// --------------------------------------------------------------------------------------
 /// @optional
 /// --------------------------------------------------------------------------------------
+
+/**
+ * `id<MobileInsightDeeplinkDelegate>`delegateをセットすることで, Deferred-deeplink経由でインストール、起動された際に呼ばれます.
+ *
+ * see MobileInsight.h
+ *
+ * @param deeplinkDelegate `id<MobileInsightDeeplinkDelegate>` delegate
+ */
++ (void)setDeeplinkDelegate:(nonnull id<MobileInsightDeeplinkDelegate>)deeplinkDelegate;
 
 /**
  * `MISEvent`objectをセットすることで, そのeventを保存します.

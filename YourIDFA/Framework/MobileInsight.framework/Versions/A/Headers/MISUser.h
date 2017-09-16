@@ -46,6 +46,23 @@ typedef NS_ENUM(NSUInteger, MISGender) {
 /**
  * @property 属性.
  */
-@property (nonatomic, strong, nullable) NSString *attribute;
+@property (nonatomic, strong, nullable) NSString *attribute __attribute__ ((deprecated));
+
+/**
+ * ユーザ属性の追加
+ *
+ * @param key 属性のキー
+ * @param value 属性の値
+ */
+- (void)setAttributeWithKey:(nonnull NSString *)key value:(nonnull NSString *)value;
+
+
+/**
+ * 属性を削除.
+ *
+ * @param key Key
+ * @param value 値
+ */
+- (void)deleteAttributeWithKey:(nonnull NSString *)key;
 
 @end

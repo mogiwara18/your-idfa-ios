@@ -43,7 +43,7 @@
 		5C7A03BE1E59BA34001F2BCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BD1E59BA34001F2BCF /* HomeViewController.swift */; };
 		5C7A03C01E59BCAA001F2BCF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */; };
 		5C7A03C31E59D155001F2BCF /* IdfaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A03C21E59D155001F2BCF /* IdfaService.swift */; };
-		5C9CA5111E64705500CB2B5C /* MobileInsight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9CA5101E64705500CB2B5C /* MobileInsight.framework */; };
+		5CAAD2891F6D268B008EED8F /* MobileInsight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAAD2881F6D268B008EED8F /* MobileInsight.framework */; };
 		5CB793141E608DFD0044CCCE /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB793131E608DFD0044CCCE /* LicenseViewController.swift */; };
 		5CB793161E608F070044CCCE /* AboutIdfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */; };
 		5CCD5D011E6AB398006E7D0F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCD5D001E6AB398006E7D0F /* CoreTelephony.framework */; };
@@ -126,8 +126,8 @@
 		5C7A03BF1E59BCAA001F2BCF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5C7A03C21E59D155001F2BCF /* IdfaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdfaService.swift; sourceTree = "<group>"; };
 		5C845E901E75826A0055A878 /* Adhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Adhoc.xcconfig; path = Configurations/Adhoc.xcconfig; sourceTree = SOURCE_ROOT; };
-		5C9CA5101E64705500CB2B5C /* MobileInsight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileInsight.framework; sourceTree = "<group>"; };
 		5C9CA5121E6470BE00CB2B5C /* YourIDFA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourIDFA-Bridging-Header.h"; sourceTree = "<group>"; };
+		5CAAD2881F6D268B008EED8F /* MobileInsight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileInsight.framework; sourceTree = "<group>"; };
 		5CB793131E608DFD0044CCCE /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		5CB793151E608F070044CCCE /* AboutIdfaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutIdfaViewController.swift; sourceTree = "<group>"; };
 		5CBA6DB01E6BEB0E000B0B18 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configurations/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -169,13 +169,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCD5D0B1E6AB66D006E7D0F /* SafariServices.framework in Frameworks */,
+				5CAAD2891F6D268B008EED8F /* MobileInsight.framework in Frameworks */,
 				5CCD5D091E6AB4F1006E7D0F /* libz.tbd in Frameworks */,
 				5CCD5D071E6AB499006E7D0F /* libsqlite3.0.tbd in Frameworks */,
 				5CCD5D051E6AB44B006E7D0F /* SystemConfiguration.framework in Frameworks */,
 				5CCD5D031E6AB3B9006E7D0F /* Security.framework in Frameworks */,
 				5CCD5D011E6AB398006E7D0F /* CoreTelephony.framework in Frameworks */,
 				5C1F0CA81E61991D00235923 /* MessageUI.framework in Frameworks */,
-				5C9CA5111E64705500CB2B5C /* MobileInsight.framework in Frameworks */,
 				5C7A03961E5974C5001F2BCF /* AdSupport.framework in Frameworks */,
 				0C5A874B8D9976AA1A1183D3 /* Pods_YourIDFA.framework in Frameworks */,
 			);
@@ -317,7 +317,7 @@
 		5C9CA50F1E646FF000CB2B5C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				5C9CA5101E64705500CB2B5C /* MobileInsight.framework */,
+				5CAAD2881F6D268B008EED8F /* MobileInsight.framework */,
 				5C9CA5121E6470BE00CB2B5C /* YourIDFA-Bridging-Header.h */,
 			);
 			path = Framework;
