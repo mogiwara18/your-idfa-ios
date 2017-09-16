@@ -49,6 +49,8 @@ $ fastlane match --force_for_new_devices deveopment
 
 ## CI/CD
 
+> tmp turn off `bitcode`
+
 `YourIDFA.ipa` will be uploaded to iTunesConnect automatically,  
 when merged into the release branch.
 
