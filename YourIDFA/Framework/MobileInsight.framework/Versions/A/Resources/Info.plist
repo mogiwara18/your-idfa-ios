@@ -7,13 +7,13 @@
 	<key>Principal class</key>
 	<string></string>
 	<key>Copyright (human-readable)</key>
-	<string>Copyright (C)2015 Yahoo! JAPAN corporation. All rights reserved.</string>
+	<string>Copyright (C)2017 Yahoo! JAPAN corporation. All rights reserved.</string>
 	<key>Bundle version</key>
 	<string>A</string>
 	<key>Bundle creator OS Type code</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3.4.1</string>
+	<string>3.6.2</string>
 	<key>Bundle OS Type code</key>
 	<string>FMWK</string>
 	<key>Bundle name</key>

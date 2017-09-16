@@ -253,7 +253,7 @@ typedef NS_ENUM(NSUInteger, MISEventContentType) {
  * ゲームイベントのエンド時のイベント.
  *
  * @param event イベント名.
- * @param achivement エンド時のレベル.
+ * @param achievement エンド時のレベル.
  * @param success 成功なら`YES`、失敗なら`NO`.
  * @return `MISEvent` object.
  */
@@ -275,7 +275,7 @@ typedef NS_ENUM(NSUInteger, MISEventContentType) {
 /**
  * `deeplink`.
  * ディープリンク流入のイベント.
- * `application:openURL:sourceApplication:annotation:`からの起動測定イベント.
+ * `application:openURL:options:`からの起動測定イベント.
  *
  * @param scheme URLスキーム.
  * @return `MISEvent` object.
