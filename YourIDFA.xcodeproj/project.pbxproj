@@ -64,6 +64,7 @@
 		5CE59DC41E5862E40059324A /* YourIDFAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE59DC31E5862E40059324A /* YourIDFAUITests.swift */; };
 		6726F252EE2995BE4AEABFAB /* Pods_YourIDFATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B042B9C182A854AB34C2DCD7 /* Pods_YourIDFATests.framework */; };
 		875F72AFD4ABF74A48D1CA61 /* Pods_YourIDFAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FD3453BC2F32DEEE95B90B /* Pods_YourIDFAUITests.framework */; };
+		F4851D0C2101E47000F3040D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4851D0B2101E47000F3040D /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,7 @@
 		BA9F80A921200CF20B93A8E7 /* Pods-YourIDFAUITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourIDFAUITests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-YourIDFAUITests/Pods-YourIDFAUITests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		C3654014FF102AF5D16D731F /* Pods-YourIDFATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourIDFATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YourIDFATests/Pods-YourIDFATests.release.xcconfig"; sourceTree = "<group>"; };
 		E5DCC705E6E0047DCCA5AD4E /* Pods-YourIDFA.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourIDFA.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-YourIDFA/Pods-YourIDFA.adhoc.xcconfig"; sourceTree = "<group>"; };
+		F4851D0B2101E47000F3040D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4851D0C2101E47000F3040D /* iAd.framework in Frameworks */,
 				5CCD5D0B1E6AB66D006E7D0F /* SafariServices.framework in Frameworks */,
 				5CAAD2891F6D268B008EED8F /* MobileInsight.framework in Frameworks */,
 				5CCD5D091E6AB4F1006E7D0F /* libz.tbd in Frameworks */,
@@ -412,6 +415,7 @@
 		6FC317826E7FB936143C0337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4851D0B2101E47000F3040D /* iAd.framework */,
 				5CCD5D0A1E6AB66D006E7D0F /* SafariServices.framework */,
 				5CCD5D081E6AB4F1006E7D0F /* libz.tbd */,
 				5CCD5D061E6AB499006E7D0F /* libsqlite3.0.tbd */,
