@@ -24,6 +24,10 @@ public final class Tracker {
         self.shared.setOpenURL(url: url)
     }
     
+    public static func addSearchAdsEvent(dict: Dictionary<String, Any>){
+        self.shared.addSearchAdsEvent(dict: dict)
+    }
+    
     public static func sendAllEvent() {
         self.shared.sendAllEvent()
     }
@@ -229,5 +233,11 @@ public final class Tracker {
                                               inDate: "19900822",
                                               outDate: "20170303")
         MobileInsight.send(event)
+    }
+    
+    private func addSearchAdsEvent(dict: Dictionary<String, Any>){
+        let user:MISUser = MISUser()
+        user.customerID = dict.description
+        MobileInsight.setUser(user)
     }
 }

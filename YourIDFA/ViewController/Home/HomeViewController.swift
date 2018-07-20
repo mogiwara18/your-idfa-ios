@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import iAd
 
 final class HomeViewController: UITableViewController, ActionDelegate {
-
+    
     // MARK: - Property
     
     private var items: [Item] = []
@@ -25,8 +26,9 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         self.initialize()
         self.configureTableView()
         self.request()
+        self.loadSearchAdsAttribute()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,18 +56,65 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         self.reloadData()
     }
     
+    private func loadSearchAdsAttribute(){
+        if (objc_getClass("ADClient") != nil) {
+            let adClient:ADClient = ADClient.shared();
+            //タイムスタンプ取得
+            let timestamp:String = String(format: "%0.0f", Date().timeIntervalSince1970)
+            
+            if #available(iOS 9.0, *) {
+                adClient.requestAttributionDetails({ (attributionDetails, error) in
+                    if error == nil {
+                        var attribution:Dictionary = [String : String]()
+                        attribution["timestamp"] = timestamp;
+                        attribution["attributionDetails"] = attributionDetails?.description;
+                        
+                        Tracker.addSearchAdsEvent(dict: attribution)
+                    }})
+                
+            } else if #available(iOS 8.0, *){
+                
+                adClient.lookupAdConversionDetails { (appPurchaseDate, iAdImpressionDate) in
+                    var attribution:Dictionary = [String : String]()
+                    attribution["timestamp"] = timestamp;
+                    
+                    if appPurchaseDate != nil {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss +zzzz"
+                        let dateString = dateFormatter.string(from: appPurchaseDate as! Date)
+                        attribution["appPurchaseDate"] = dateString
+                    }
+                    
+                    if iAdImpressionDate != nil {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss +zzzz"
+                        let dateString = dateFormatter.string(from: iAdImpressionDate as! Date)
+                        attribution["iAdImpressionDate"] = dateString
+                    }
+                    
+                    Tracker.addSearchAdsEvent(dict: attribution)
+                }
+                
+            } else {
+                
+            }
+        }
+    }
+    
+    
+    
     @IBAction func pressMenuButton(_ sender: Any) {
         Analytics.sendEvent(type: EventType.pressMenu)
         let settingVC = UIStoryboard.settingViewController()
         self.present(settingVC, animated: true, completion: nil)
     }
-
+    
     // MARK: - UITableViewDatasource
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
@@ -115,3 +164,4 @@ final class HomeViewController: UITableViewController, ActionDelegate {
         self.handler.action(item: item)
     }
 }
+
